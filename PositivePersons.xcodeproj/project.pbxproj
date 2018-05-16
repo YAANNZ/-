@@ -15,6 +15,7 @@
 		19E1518420A4374D001D6E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518320A4374D001D6E60 /* main.m */; };
 		19E1518E20A4374D001D6E60 /* PositivePersonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518D20A4374D001D6E60 /* PositivePersonsTests.m */; };
 		19E1519920A4374E001D6E60 /* PositivePersonsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */; };
+		19E151AC20AC8B73001D6E60 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		19E1519420A4374E001D6E60 /* PositivePersonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositivePersonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositivePersonsUITests.m; sourceTree = "<group>"; };
 		19E1519A20A4374E001D6E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19E151AA20AC8B73001D6E60 /* PPSOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSOptionsViewController.h; sourceTree = "<group>"; };
+		19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */,
 				19E1518220A4374D001D6E60 /* Info.plist */,
 				19E1518320A4374D001D6E60 /* main.m */,
+				19E151AA20AC8B73001D6E60 /* PPSOptionsViewController.h */,
+				19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */,
 			);
 			path = PositivePersons;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 		19E1516920A4374D001D6E60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PPS;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = zynabc;
 				TargetAttributes = {
@@ -268,6 +274,7 @@
 				19E1517920A4374D001D6E60 /* ViewController.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
 				19E1517620A4374D001D6E60 /* AppDelegate.m in Sources */,
+				19E151AC20AC8B73001D6E60 /* PPSOptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
