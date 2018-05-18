@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  PPSHomeViewController.h
 //  PositivePersons
 //
-//  Created by ZHUYN on 2018/5/10.
+//  Created by ZHUYN on 2018/5/17.
 //  Copyright © 2018年 zynabc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PPSHomeViewController : UIViewController
 
 @end
-

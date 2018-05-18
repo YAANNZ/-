@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19E1517620A4374D001D6E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1517520A4374D001D6E60 /* AppDelegate.m */; };
-		19E1517920A4374D001D6E60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1517820A4374D001D6E60 /* ViewController.m */; };
+		193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250220AEC68200F08873 /* PPSHomeViewController.m */; };
+		193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */; };
+		193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250920AEC68200F08873 /* PPSOptionsViewController.m */; };
+		193F251A20AEC68300F08873 /* PPSOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250C20AEC68200F08873 /* PPSOptionModel.m */; };
+		193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */; };
+		193F251C20AEC68300F08873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F251520AEC68200F08873 /* AppDelegate.m */; };
+		193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F251620AEC68200F08873 /* PPSTabBarController.m */; };
 		19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517A20A4374D001D6E60 /* Main.storyboard */; };
 		19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517D20A4374D001D6E60 /* Assets.xcassets */; };
 		19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */; };
 		19E1518420A4374D001D6E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518320A4374D001D6E60 /* main.m */; };
 		19E1518E20A4374D001D6E60 /* PositivePersonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518D20A4374D001D6E60 /* PositivePersonsTests.m */; };
 		19E1519920A4374E001D6E60 /* PositivePersonsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */; };
-		19E151AC20AC8B73001D6E60 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
+		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
+		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
+		193F250720AEC68200F08873 /* PPSOptionsTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewModel.h; sourceTree = "<group>"; };
+		193F250920AEC68200F08873 /* PPSOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsViewController.m; sourceTree = "<group>"; };
+		193F250A20AEC68200F08873 /* PPSOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionsViewController.h; sourceTree = "<group>"; };
+		193F250C20AEC68200F08873 /* PPSOptionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionModel.m; sourceTree = "<group>"; };
+		193F250D20AEC68200F08873 /* PPSOptionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionModel.h; sourceTree = "<group>"; };
+		193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewCell.m; sourceTree = "<group>"; };
+		193F251020AEC68200F08873 /* PPSOptionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewCell.h; sourceTree = "<group>"; };
+		193F251320AEC68200F08873 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		193F251420AEC68200F08873 /* PPSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSTabBarController.h; sourceTree = "<group>"; };
+		193F251520AEC68200F08873 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		193F251620AEC68200F08873 /* PPSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSTabBarController.m; sourceTree = "<group>"; };
 		19E1517120A4374D001D6E60 /* PositivePersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositivePersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		19E1517420A4374D001D6E60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		19E1517520A4374D001D6E60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19E1517720A4374D001D6E60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19E1517820A4374D001D6E60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19E1517B20A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E1517D20A4374D001D6E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19E1518020A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,8 +66,6 @@
 		19E1519420A4374E001D6E60 /* PositivePersonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositivePersonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositivePersonsUITests.m; sourceTree = "<group>"; };
 		19E1519A20A4374E001D6E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19E151AA20AC8B73001D6E60 /* PPSOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSOptionsViewController.h; sourceTree = "<group>"; };
-		19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		193F24FF20AEC68200F08873 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				193F251220AEC68200F08873 /* Base */,
+				193F251120AEC68200F08873 /* Lib */,
+				193F250020AEC68200F08873 /* Home */,
+				193F250420AEC68200F08873 /* Options */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		193F250020AEC68200F08873 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				193F250120AEC68200F08873 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		193F250120AEC68200F08873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				193F250220AEC68200F08873 /* PPSHomeViewController.m */,
+				193F250320AEC68200F08873 /* PPSHomeViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		193F250420AEC68200F08873 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				193F250B20AEC68200F08873 /* Model */,
+				193F250E20AEC68200F08873 /* View */,
+				193F250520AEC68200F08873 /* ViewModel */,
+				193F250820AEC68200F08873 /* Controller */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		193F250520AEC68200F08873 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */,
+				193F250720AEC68200F08873 /* PPSOptionsTableViewModel.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		193F250820AEC68200F08873 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				193F250920AEC68200F08873 /* PPSOptionsViewController.m */,
+				193F250A20AEC68200F08873 /* PPSOptionsViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		193F250B20AEC68200F08873 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				193F250D20AEC68200F08873 /* PPSOptionModel.h */,
+				193F250C20AEC68200F08873 /* PPSOptionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		193F250E20AEC68200F08873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */,
+				193F251020AEC68200F08873 /* PPSOptionsTableViewCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		193F251120AEC68200F08873 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		193F251220AEC68200F08873 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				193F251320AEC68200F08873 /* AppDelegate.h */,
+				193F251520AEC68200F08873 /* AppDelegate.m */,
+				193F251420AEC68200F08873 /* PPSTabBarController.h */,
+				193F251620AEC68200F08873 /* PPSTabBarController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		19E1516820A4374D001D6E60 = {
 			isa = PBXGroup;
 			children = (
@@ -104,17 +209,12 @@
 		19E1517320A4374D001D6E60 /* PositivePersons */ = {
 			isa = PBXGroup;
 			children = (
-				19E1517420A4374D001D6E60 /* AppDelegate.h */,
-				19E1517520A4374D001D6E60 /* AppDelegate.m */,
-				19E1517720A4374D001D6E60 /* ViewController.h */,
-				19E1517820A4374D001D6E60 /* ViewController.m */,
+				193F24FF20AEC68200F08873 /* Project */,
 				19E1517A20A4374D001D6E60 /* Main.storyboard */,
 				19E1517D20A4374D001D6E60 /* Assets.xcassets */,
 				19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */,
 				19E1518220A4374D001D6E60 /* Info.plist */,
 				19E1518320A4374D001D6E60 /* main.m */,
-				19E151AA20AC8B73001D6E60 /* PPSOptionsViewController.h */,
-				19E151AB20AC8B73001D6E60 /* PPSOptionsViewController.m */,
 			);
 			path = PositivePersons;
 			sourceTree = "<group>";
@@ -271,10 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19E1517920A4374D001D6E60 /* ViewController.m in Sources */,
+				193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
-				19E1517620A4374D001D6E60 /* AppDelegate.m in Sources */,
-				19E151AC20AC8B73001D6E60 /* PPSOptionsViewController.m in Sources */,
+				193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */,
+				193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */,
+				193F251A20AEC68300F08873 /* PPSOptionModel.m in Sources */,
+				193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */,
+				193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */,
+				193F251C20AEC68300F08873 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

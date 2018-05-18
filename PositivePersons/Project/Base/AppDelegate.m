@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PPSTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window.rootViewController = [[UITabBarController alloc] init];
+    self.window.rootViewController = [[PPSTabBarController alloc] init];
     
     return YES;
 }
