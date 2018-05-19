@@ -14,6 +14,8 @@
 		193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */; };
 		193F251C20AEC68300F08873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F251520AEC68200F08873 /* AppDelegate.m */; };
 		193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F251620AEC68200F08873 /* PPSTabBarController.m */; };
+		193F252220B068D600F08873 /* PPSOptionsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F252120B068D600F08873 /* PPSOptionsTableViewDataSource.m */; };
+		193F252520B068FB00F08873 /* PPSOptionsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F252420B068FB00F08873 /* PPSOptionsTableViewDelegate.m */; };
 		19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517A20A4374D001D6E60 /* Main.storyboard */; };
 		19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517D20A4374D001D6E60 /* Assets.xcassets */; };
 		19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */; };
@@ -54,6 +56,10 @@
 		193F251420AEC68200F08873 /* PPSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSTabBarController.h; sourceTree = "<group>"; };
 		193F251520AEC68200F08873 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		193F251620AEC68200F08873 /* PPSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSTabBarController.m; sourceTree = "<group>"; };
+		193F252020B068D600F08873 /* PPSOptionsTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewDataSource.h; sourceTree = "<group>"; };
+		193F252120B068D600F08873 /* PPSOptionsTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewDataSource.m; sourceTree = "<group>"; };
+		193F252320B068FB00F08873 /* PPSOptionsTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewDelegate.h; sourceTree = "<group>"; };
+		193F252420B068FB00F08873 /* PPSOptionsTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewDelegate.m; sourceTree = "<group>"; };
 		19E1517120A4374D001D6E60 /* PositivePersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositivePersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1517B20A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E1517D20A4374D001D6E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,8 +121,8 @@
 		193F250120AEC68200F08873 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				193F250220AEC68200F08873 /* PPSHomeViewController.m */,
 				193F250320AEC68200F08873 /* PPSHomeViewController.h */,
+				193F250220AEC68200F08873 /* PPSHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -128,6 +134,10 @@
 				193F250E20AEC68200F08873 /* View */,
 				193F250520AEC68200F08873 /* ViewModel */,
 				193F250820AEC68200F08873 /* Controller */,
+				193F252020B068D600F08873 /* PPSOptionsTableViewDataSource.h */,
+				193F252120B068D600F08873 /* PPSOptionsTableViewDataSource.m */,
+				193F252320B068FB00F08873 /* PPSOptionsTableViewDelegate.h */,
+				193F252420B068FB00F08873 /* PPSOptionsTableViewDelegate.m */,
 			);
 			path = Options;
 			sourceTree = "<group>";
@@ -135,8 +145,8 @@
 		193F250520AEC68200F08873 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */,
 				193F250720AEC68200F08873 /* PPSOptionsTableViewModel.h */,
+				193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -144,8 +154,8 @@
 		193F250820AEC68200F08873 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				193F250920AEC68200F08873 /* PPSOptionsViewController.m */,
 				193F250A20AEC68200F08873 /* PPSOptionsViewController.h */,
+				193F250920AEC68200F08873 /* PPSOptionsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,8 +172,8 @@
 		193F250E20AEC68200F08873 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */,
 				193F251020AEC68200F08873 /* PPSOptionsTableViewCell.h */,
+				193F250F20AEC68200F08873 /* PPSOptionsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +383,8 @@
 			files = (
 				193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
+				193F252220B068D600F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
+				193F252520B068FB00F08873 /* PPSOptionsTableViewDelegate.m in Sources */,
 				193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */,
 				193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */,
 				193F251A20AEC68300F08873 /* PPSOptionModel.m in Sources */,

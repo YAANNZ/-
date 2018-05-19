@@ -10,4 +10,6 @@
 
 @interface PPSOptionsTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) UILabel *optionLabel;
+
 @end
