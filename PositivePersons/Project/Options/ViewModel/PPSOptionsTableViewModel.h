@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void (^callback) (NSArray *array);
+
 @interface PPSOptionsTableViewModel : NSObject
 
 @end
