@@ -16,12 +16,15 @@
 		193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F251620AEC68200F08873 /* PPSTabBarController.m */; };
 		193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F252720B1D11C00F08873 /* PPSOptionsTableViewDataSource.m */; };
 		193F252C20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F252A20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m */; };
+		193F254620B2AF8300F08873 /* PPSRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F254220B2AF8300F08873 /* PPSRefreshFooter.m */; };
+		193F254720B2AF8300F08873 /* PPSRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F254320B2AF8300F08873 /* PPSRefreshHeader.m */; };
 		19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517A20A4374D001D6E60 /* Main.storyboard */; };
 		19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517D20A4374D001D6E60 /* Assets.xcassets */; };
 		19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */; };
 		19E1518420A4374D001D6E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518320A4374D001D6E60 /* main.m */; };
 		19E1518E20A4374D001D6E60 /* PositivePersonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518D20A4374D001D6E60 /* PositivePersonsTests.m */; };
 		19E1519920A4374E001D6E60 /* PositivePersonsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */; };
+		42129A99465F8C1F712115C3 /* libPods-PositivePersons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B79EB732C51B29357289897 /* libPods-PositivePersons.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00666E991F76909CB0DFC444 /* Pods-PositivePersons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositivePersons.release.xcconfig"; path = "Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons.release.xcconfig"; sourceTree = "<group>"; };
 		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
 		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
 		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
@@ -60,6 +64,10 @@
 		193F252820B1D11C00F08873 /* PPSOptionsTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewDelegate.h; sourceTree = "<group>"; };
 		193F252920B1D11C00F08873 /* PPSOptionsTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSOptionsTableViewDataSource.h; sourceTree = "<group>"; };
 		193F252A20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewDelegate.m; sourceTree = "<group>"; };
+		193F254220B2AF8300F08873 /* PPSRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSRefreshFooter.m; sourceTree = "<group>"; };
+		193F254320B2AF8300F08873 /* PPSRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSRefreshHeader.m; sourceTree = "<group>"; };
+		193F254420B2AF8300F08873 /* PPSRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSRefreshHeader.h; sourceTree = "<group>"; };
+		193F254520B2AF8300F08873 /* PPSRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSRefreshFooter.h; sourceTree = "<group>"; };
 		19E1517120A4374D001D6E60 /* PositivePersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositivePersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1517B20A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E1517D20A4374D001D6E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +80,8 @@
 		19E1519420A4374E001D6E60 /* PositivePersonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositivePersonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositivePersonsUITests.m; sourceTree = "<group>"; };
 		19E1519A20A4374E001D6E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B79EB732C51B29357289897 /* libPods-PositivePersons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PositivePersons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54D0C87A234CAED2A7A2962 /* Pods-PositivePersons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositivePersons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42129A99465F8C1F712115C3 /* libPods-PositivePersons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +189,7 @@
 		193F251120AEC68200F08873 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				193F254120B2AF8300F08873 /* PPSRefresh */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -196,12 +208,23 @@
 		193F252620B1D11C00F08873 /* TableViewProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				193F252720B1D11C00F08873 /* PPSOptionsTableViewDataSource.m */,
 				193F252820B1D11C00F08873 /* PPSOptionsTableViewDelegate.h */,
-				193F252920B1D11C00F08873 /* PPSOptionsTableViewDataSource.h */,
 				193F252A20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m */,
+				193F252920B1D11C00F08873 /* PPSOptionsTableViewDataSource.h */,
+				193F252720B1D11C00F08873 /* PPSOptionsTableViewDataSource.m */,
 			);
 			path = TableViewProtocol;
+			sourceTree = "<group>";
+		};
+		193F254120B2AF8300F08873 /* PPSRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				193F254420B2AF8300F08873 /* PPSRefreshHeader.h */,
+				193F254320B2AF8300F08873 /* PPSRefreshHeader.m */,
+				193F254520B2AF8300F08873 /* PPSRefreshFooter.h */,
+				193F254220B2AF8300F08873 /* PPSRefreshFooter.m */,
+			);
+			path = PPSRefresh;
 			sourceTree = "<group>";
 		};
 		19E1516820A4374D001D6E60 = {
@@ -211,6 +234,8 @@
 				19E1518C20A4374D001D6E60 /* PositivePersonsTests */,
 				19E1519720A4374E001D6E60 /* PositivePersonsUITests */,
 				19E1517220A4374D001D6E60 /* Products */,
+				4B826A1C129D8BF9DAABD895 /* Pods */,
+				FA674348652BB74D398C3511 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +280,23 @@
 			path = PositivePersonsUITests;
 			sourceTree = "<group>";
 		};
+		4B826A1C129D8BF9DAABD895 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F54D0C87A234CAED2A7A2962 /* Pods-PositivePersons.debug.xcconfig */,
+				00666E991F76909CB0DFC444 /* Pods-PositivePersons.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA674348652BB74D398C3511 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B79EB732C51B29357289897 /* libPods-PositivePersons.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,9 +304,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19E1519D20A4374E001D6E60 /* Build configuration list for PBXNativeTarget "PositivePersons" */;
 			buildPhases = (
+				54B80FEEDB8EBF82AB8965EF /* [CP] Check Pods Manifest.lock */,
 				19E1516D20A4374D001D6E60 /* Sources */,
 				19E1516E20A4374D001D6E60 /* Frameworks */,
 				19E1516F20A4374D001D6E60 /* Resources */,
+				75D08D7E63CE11D1F0004554 /* [CP] Embed Pods Frameworks */,
+				B0E4E30177939B4B03889DB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,7 +368,7 @@
 				TargetAttributes = {
 					19E1517020A4374D001D6E60 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					19E1518820A4374D001D6E60 = {
 						CreatedOnToolsVersion = 9.1;
@@ -384,14 +429,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54B80FEEDB8EBF82AB8965EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PositivePersons-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75D08D7E63CE11D1F0004554 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0E4E30177939B4B03889DB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		19E1516D20A4374D001D6E60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193F254620B2AF8300F08873 /* PPSRefreshFooter.m in Sources */,
 				193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
 				193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
+				193F254720B2AF8300F08873 /* PPSRefreshHeader.m in Sources */,
 				193F252C20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m in Sources */,
 				193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */,
 				193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */,
@@ -559,30 +657,35 @@
 		};
 		19E1519E20A4374E001D6E60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F54D0C87A234CAED2A7A2962 /* Pods-PositivePersons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UA62U3JARN;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 3RNRBZPDHP;
 				INFOPLIST_FILE = PositivePersons/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.PositivePersons;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f779bb4-0ae1-4de6-9b8c-c001982f8412";
+				PROVISIONING_PROFILE_SPECIFIER = PositivePersons_dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		19E1519F20A4374E001D6E60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00666E991F76909CB0DFC444 /* Pods-PositivePersons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UA62U3JARN;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PositivePersons/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.PositivePersons;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PPSOptionsTableViewDataSource : NSObject
+@interface PPSOptionsTableViewDataSource : NSObject <UITableViewDataSource>
+
+@property (nonatomic,strong) NSArray *array;
 
 @end

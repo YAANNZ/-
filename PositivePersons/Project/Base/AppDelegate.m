@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PPSTabBarController.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,10 @@
     // Override point for customization after application launch.
     
     self.window.rootViewController = [[PPSTabBarController alloc] init];
+    
+    // 初始化Bugly
+    BuglyConfig *config = [[BuglyConfig alloc] init];
+    [Bugly startWithAppId:@"2363d3b46b" developmentDevice:YES config:config];
     
     return YES;
 }

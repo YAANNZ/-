@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PPSOptionsTableViewDelegate : NSObject
+@interface PPSOptionsTableViewDelegate : NSObject <UITableViewDelegate>
+
+@property (nonatomic,strong) NSArray *array;
 
 @end
