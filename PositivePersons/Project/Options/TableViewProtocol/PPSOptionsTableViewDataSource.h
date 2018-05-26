@@ -11,6 +11,6 @@
 
 @interface PPSOptionsTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic,strong) NSArray *array;
+@property (nonatomic,strong) NSArray *dataArray;
 
 @end

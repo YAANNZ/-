@@ -10,4 +10,9 @@
 
 @implementation PPSOptionsTableViewModel
 
+- (void)getAllOptionsData
+{
+    
+}
+
 @end

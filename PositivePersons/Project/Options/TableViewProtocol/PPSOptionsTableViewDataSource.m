@@ -7,7 +7,20 @@
 //
 
 #import "PPSOptionsTableViewDataSource.h"
+#import "PPSOptionsTableViewCell.h"
 
 @implementation PPSOptionsTableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PPSOptionsTableViewCell *cell = [PPSOptionsTableViewCell cellWithTableView:tableView];
+    cell.optionData = self.dataArray[indexPath.row];
+    return cell;
+}
 
 @end

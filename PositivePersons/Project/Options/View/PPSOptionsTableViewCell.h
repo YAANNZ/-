@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPSOptionModel.h"
 
 @interface PPSOptionsTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) UILabel *optionLabel;
+@property (nonatomic, strong) PPSOptionModel *optionData;
+
++ (PPSOptionsTableViewCell *)cellWithTableView:(UITableView *)tableView;
 
 @end
