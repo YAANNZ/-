@@ -12,6 +12,7 @@
 #import "PPSOptionsTableViewModel.h"
 #import "PPSOptionsTableViewDelegate.h"
 #import "PPSOptionsTableViewDataSource.h"
+#import "PPSOptionModel.h"
 
 @interface PPSOptionsViewController ()
 
@@ -48,7 +49,7 @@
     self.tableView.dataSource = self.tableViewDataSource;
     
     // temp
-    self.tableViewDataSource.dataArray = @[@"时间正在一分一秒的流逝啊", @"这很残忍，时间又过去了一秒", @"还没行动吗？", @"我还能说什么呢"];
+    self.tableViewDataSource.dataArray = [PPSOptionModel mj_objectArrayWithKeyValuesArray:@[@{@"contentStr": @"时间正在一分一秒的流逝啊"},@{@"contentStr": @"时间正在一分一秒的流逝啊"}, @{@"contentStr": @"时间正在一分一秒的流逝啊"}, @{@"contentStr": @"时间正在一分一秒的流逝啊"}]];
     
     //    YiRefreshHeader  头部刷新按钮的使用
 //    self.refreshHeader = [[PPSRefreshHeader alloc] init];
