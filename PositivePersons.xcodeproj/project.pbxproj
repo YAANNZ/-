@@ -37,6 +37,11 @@
 		193F25AD20B9B69800F08873 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25A520B9B69800F08873 /* AFURLRequestSerialization.m */; };
 		193F25AE20B9B69800F08873 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25A720B9B69800F08873 /* AFNetworkReachabilityManager.m */; };
 		193F25AF20B9B69800F08873 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25A820B9B69800F08873 /* AFSecurityPolicy.m */; };
+		193F25B720BADFF700F08873 /* PPSHomeTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25B620BADFF700F08873 /* PPSHomeTableViewDelegate.m */; };
+		193F25BA20BAE02E00F08873 /* PPSHomeTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25B920BAE02E00F08873 /* PPSHomeTableViewDatasource.m */; };
+		193F25BD20BAE16900F08873 /* PPSHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25BC20BAE16900F08873 /* PPSHomeTableViewCell.m */; };
+		193F25C020BAE1F600F08873 /* PPSHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25BF20BAE1F600F08873 /* PPSHomeModel.m */; };
+		193F25C320BAE3C200F08873 /* PPSHomeTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25C220BAE3C200F08873 /* PPSHomeTableViewModel.m */; };
 		19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517A20A4374D001D6E60 /* Main.storyboard */; };
 		19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517D20A4374D001D6E60 /* Assets.xcassets */; };
 		19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */; };
@@ -132,6 +137,16 @@
 		193F25A820B9B69800F08873 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		193F25A920B9B69800F08873 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		193F25B020B9B74500F08873 /* PPSHTTPLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHTTPLink.h; sourceTree = "<group>"; };
+		193F25B520BADFF700F08873 /* PPSHomeTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeTableViewDelegate.h; sourceTree = "<group>"; };
+		193F25B620BADFF700F08873 /* PPSHomeTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeTableViewDelegate.m; sourceTree = "<group>"; };
+		193F25B820BAE02E00F08873 /* PPSHomeTableViewDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeTableViewDatasource.h; sourceTree = "<group>"; };
+		193F25B920BAE02E00F08873 /* PPSHomeTableViewDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeTableViewDatasource.m; sourceTree = "<group>"; };
+		193F25BB20BAE16900F08873 /* PPSHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeTableViewCell.h; sourceTree = "<group>"; };
+		193F25BC20BAE16900F08873 /* PPSHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeTableViewCell.m; sourceTree = "<group>"; };
+		193F25BE20BAE1F600F08873 /* PPSHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeModel.h; sourceTree = "<group>"; };
+		193F25BF20BAE1F600F08873 /* PPSHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeModel.m; sourceTree = "<group>"; };
+		193F25C120BAE3C200F08873 /* PPSHomeTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeTableViewModel.h; sourceTree = "<group>"; };
+		193F25C220BAE3C200F08873 /* PPSHomeTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeTableViewModel.m; sourceTree = "<group>"; };
 		19E1517120A4374D001D6E60 /* PositivePersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositivePersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1517B20A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E1517D20A4374D001D6E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +203,10 @@
 		193F250020AEC68200F08873 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				193F25B220BADED400F08873 /* Model */,
+				193F25B120BADED400F08873 /* View */,
+				193F25B420BADED400F08873 /* ViewModel */,
+				193F25B320BADED400F08873 /* TableViewProtocol */,
 				193F250120AEC68200F08873 /* Controller */,
 			);
 			path = Home;
@@ -348,6 +367,44 @@
 				193F25A920B9B69800F08873 /* AFHTTPSessionManager.h */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		193F25B120BADED400F08873 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				193F25BB20BAE16900F08873 /* PPSHomeTableViewCell.h */,
+				193F25BC20BAE16900F08873 /* PPSHomeTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		193F25B220BADED400F08873 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				193F25BE20BAE1F600F08873 /* PPSHomeModel.h */,
+				193F25BF20BAE1F600F08873 /* PPSHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		193F25B320BADED400F08873 /* TableViewProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				193F25B520BADFF700F08873 /* PPSHomeTableViewDelegate.h */,
+				193F25B620BADFF700F08873 /* PPSHomeTableViewDelegate.m */,
+				193F25B820BAE02E00F08873 /* PPSHomeTableViewDatasource.h */,
+				193F25B920BAE02E00F08873 /* PPSHomeTableViewDatasource.m */,
+			);
+			path = TableViewProtocol;
+			sourceTree = "<group>";
+		};
+		193F25B420BADED400F08873 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				193F25C120BAE3C200F08873 /* PPSHomeTableViewModel.h */,
+				193F25C220BAE3C200F08873 /* PPSHomeTableViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		19E1516820A4374D001D6E60 = {
@@ -624,6 +681,7 @@
 				193F259820B9B2F200F08873 /* MASViewConstraint.m in Sources */,
 				193F259520B9B2F200F08873 /* NSArray+MASAdditions.m in Sources */,
 				193F251B20AEC68300F08873 /* PPSOptionsTableViewCell.m in Sources */,
+				193F25BA20BAE02E00F08873 /* PPSHomeTableViewDatasource.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
 				193F259920B9B2F200F08873 /* MASViewAttribute.m in Sources */,
 				193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
@@ -634,10 +692,12 @@
 				193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */,
 				193F25AC20B9B69800F08873 /* AFURLSessionManager.m in Sources */,
 				193F259620B9B2F200F08873 /* View+MASAdditions.m in Sources */,
+				193F25BD20BAE16900F08873 /* PPSHomeTableViewCell.m in Sources */,
 				193F25AB20B9B69800F08873 /* AFHTTPSessionManager.m in Sources */,
 				193F259320B9B2F200F08873 /* MASConstraintMaker.m in Sources */,
 				193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */,
 				193F251A20AEC68300F08873 /* PPSOptionModel.m in Sources */,
+				193F25B720BADFF700F08873 /* PPSHomeTableViewDelegate.m in Sources */,
 				193F259020B9B2F200F08873 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */,
 				193F25AF20B9B69800F08873 /* AFSecurityPolicy.m in Sources */,
@@ -645,8 +705,10 @@
 				193F259220B9B2F200F08873 /* MASCompositeConstraint.m in Sources */,
 				193F255B20B6B06B00F08873 /* NSString+PPSAddition.m in Sources */,
 				193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */,
+				193F25C020BAE1F600F08873 /* PPSHomeModel.m in Sources */,
 				193F259420B9B2F200F08873 /* MASLayoutConstraint.m in Sources */,
 				193F25AA20B9B69800F08873 /* AFURLResponseSerialization.m in Sources */,
+				193F25C320BAE3C200F08873 /* PPSHomeTableViewModel.m in Sources */,
 				193F251C20AEC68300F08873 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

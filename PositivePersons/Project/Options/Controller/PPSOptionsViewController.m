@@ -47,6 +47,9 @@
     self.tableViewDataSource = [[PPSOptionsTableViewDataSource alloc] init];
     self.tableView.dataSource = self.tableViewDataSource;
     
+    // temp
+    self.tableViewDataSource.dataArray = @[@"时间正在一分一秒的流逝啊", @"这很残忍，时间又过去了一秒", @"还没行动吗？", @"我还能说什么呢"];
+    
     //    YiRefreshHeader  头部刷新按钮的使用
 //    self.refreshHeader = [[PPSRefreshHeader alloc] init];
 //    self.refreshHeader.scrollView = self.tableView;

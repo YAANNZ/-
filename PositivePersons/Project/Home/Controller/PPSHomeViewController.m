@@ -7,19 +7,43 @@
 //
 
 #import "PPSHomeViewController.h"
+#import "PPSHomeTableViewDelegate.h"
+#import "PPSHomeTableViewDatasource.h"
+#import "PPSHomeTableViewModel.h"
 
 @interface PPSHomeViewController ()
+
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) PPSHomeTableViewModel *homeTableViewModel;
+@property (nonatomic, strong) PPSHomeTableViewDelegate *tableViewDelegate;
+@property (nonatomic, strong) PPSHomeTableViewDatasource *tableViewDatasource;
 
 @end
 
 @implementation PPSHomeViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self.tableView = tableView;
+    [self.view addSubview:self.tableView];
+    
+    self.homeTableViewModel = [[PPSHomeTableViewModel alloc] init];
+    
+    self.tableViewDelegate = [[PPSHomeTableViewDelegate alloc] init];
+    self.tableViewDatasource = [[PPSHomeTableViewDatasource alloc] init];
+    self.tableView.delegate = self.tableViewDelegate;
+    self.tableView.dataSource = self.tableViewDatasource;
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
