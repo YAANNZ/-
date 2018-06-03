@@ -14,9 +14,11 @@
 
 // 模块
 #define API_Options      @"option/"
+#define API_Home      @"home/"
 
 
 // 接口
 #define options_allOptions     URLTool(API_Options, @"allOptions")
+#define home_allTasks     URLTool(API_Home, @"allTasks")
 
 #endif /* PPSHTTPLink_h */
