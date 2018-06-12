@@ -20,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] init];
     self.window.rootViewController = [[PPSTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
     
     // 初始化Bugly
     BuglyConfig *config = [[BuglyConfig alloc] init];

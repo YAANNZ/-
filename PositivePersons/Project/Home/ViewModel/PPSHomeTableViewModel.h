@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
 @interface PPSHomeTableViewModel : NSObject
 
-
+- (void)headerRefreshRequestWithCallback:(callback)callback;
+- (void)footerRefreshRequestWithCallback:(callback)callback;
 
 @end

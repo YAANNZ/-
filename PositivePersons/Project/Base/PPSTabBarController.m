@@ -39,12 +39,12 @@
     
     NSDictionary *textAttributes = @{
                                      NSFontAttributeName : [UIFont systemFontOfSize:19.f],
-                                     NSForegroundColorAttributeName : [UIColor whiteColor]
+                                     NSForegroundColorAttributeName : [UIColor blackColor]
                                      };
     [childVc.navigationController.navigationBar setTitleTextAttributes:textAttributes];
     
     [childVc.tabBarItem setTitleTextAttributes:@{
-                                                 NSForegroundColorAttributeName : [UIColor colorWithRed:40/255.0 green:111/255.0 blue:173/255.0 alpha:1.0]
+                                                 NSForegroundColorAttributeName : [UIColor blackColor]
                                                  } forState:UIControlStateSelected];
     childVc.title = title;
     childVc.tabBarItem.image = normalImg;

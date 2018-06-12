@@ -49,7 +49,7 @@
     }];
 }
 
-- (void)setOptionData:(PPSHomeModel *)dataModel
+- (void)setDataModel:(PPSHomeModel *)dataModel
 {
     _dataModel = dataModel;
     
