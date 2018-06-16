@@ -9,9 +9,15 @@
 #import "PPSDataBaseHelper.h"
 #import "FMDB.h"
 
+@interface PPSDataBaseHelper ()
+
+@property (nonatomic, strong) FMDatabaseQueue *dbQueue;
+
+@end
+
 @implementation PPSDataBaseHelper
 
-+ (PPSDataBaseHelper *)sharenstance
++ (PPSDataBaseHelper *)shareInstance
 {
     static PPSDataBaseHelper *dbHelperInstance;
     static dispatch_once_t onceToken;
@@ -23,7 +29,23 @@
     return dbHelperInstance;
 }
 
-- (void)dbQueue
+- (FMDatabaseQueue *)dbQueue
+{
+    if (!_dbQueue)
+    {
+        NSString *dbQueuePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"xx.sqlite"];
+        _dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbQueuePath];
+    }
+    
+    if (_dbQueue)
+    {
+        [self createAllTableIfNeed];
+    }
+    
+    return _dbQueue;
+}
+
+- (void)createAllTableIfNeed
 {
     
 }

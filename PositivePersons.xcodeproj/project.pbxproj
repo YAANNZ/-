@@ -478,8 +478,8 @@
 		19BDD08D20D539FC00C9117D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */,
 				19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */,
+				19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
