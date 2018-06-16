@@ -51,8 +51,10 @@
 		193F25E120BB0FD300F08873 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D420BB0FD300F08873 /* NSString+MJExtension.m */; };
 		193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D520BB0FD300F08873 /* MJPropertyKey.m */; };
 		193F25E320BB0FD300F08873 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D920BB0FD300F08873 /* MJFoundation.m */; };
-		19BDD08B20D4146300C9117D /* NSString+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08620D4146200C9117D /* NSString+PPSAddition.m */; };
-		19BDD08C20D4146300C9117D /* PPSDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08920D4146300C9117D /* PPSDataBaseHelper.m */; };
+		19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */; };
+		19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */; };
+		19BDD09820D539FC00C9117D /* patient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19BDD09420D539FC00C9117D /* patient.jpg */; };
+		19BDD09920D539FC00C9117D /* positive.png in Resources */ = {isa = PBXBuildFile; fileRef = 19BDD09520D539FC00C9117D /* positive.png */; };
 		19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517A20A4374D001D6E60 /* Main.storyboard */; };
 		19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517D20A4374D001D6E60 /* Assets.xcassets */; };
 		19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1517F20A4374D001D6E60 /* LaunchScreen.storyboard */; };
@@ -177,10 +179,12 @@
 		193F25D720BB0FD300F08873 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		193F25D820BB0FD300F08873 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		193F25D920BB0FD300F08873 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
-		19BDD08620D4146200C9117D /* NSString+PPSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPSAddition.m"; sourceTree = "<group>"; };
-		19BDD08720D4146200C9117D /* NSString+PPSAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PPSAddition.h"; sourceTree = "<group>"; };
-		19BDD08920D4146300C9117D /* PPSDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSDataBaseHelper.m; sourceTree = "<group>"; };
-		19BDD08A20D4146300C9117D /* PPSDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSDataBaseHelper.h; sourceTree = "<group>"; };
+		19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSDataBaseHelper.m; sourceTree = "<group>"; };
+		19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSDataBaseHelper.h; sourceTree = "<group>"; };
+		19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPSAddition.m"; sourceTree = "<group>"; };
+		19BDD09220D539FC00C9117D /* NSString+PPSAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PPSAddition.h"; sourceTree = "<group>"; };
+		19BDD09420D539FC00C9117D /* patient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = patient.jpg; sourceTree = "<group>"; };
+		19BDD09520D539FC00C9117D /* positive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = positive.png; sourceTree = "<group>"; };
 		19E1517120A4374D001D6E60 /* PositivePersons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositivePersons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1517B20A4374D001D6E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E1517D20A4374D001D6E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,9 +231,12 @@
 			isa = PBXGroup;
 			children = (
 				193F251220AEC68200F08873 /* Base */,
-				193F251120AEC68200F08873 /* Lib */,
 				193F250020AEC68200F08873 /* Home */,
 				193F250420AEC68200F08873 /* Options */,
+				19BDD09020D539FC00C9117D /* Category */,
+				19BDD09320D539FC00C9117D /* Resource */,
+				19BDD08D20D539FC00C9117D /* Tool */,
+				193F251120AEC68200F08873 /* Lib */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -317,8 +324,6 @@
 		193F251220AEC68200F08873 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				19BDD08520D4146200C9117D /* Category */,
-				19BDD08820D4146300C9117D /* Tool */,
 				193F251320AEC68200F08873 /* AppDelegate.h */,
 				193F251520AEC68200F08873 /* AppDelegate.m */,
 				193F251420AEC68200F08873 /* PPSTabBarController.h */,
@@ -470,22 +475,31 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
-		19BDD08520D4146200C9117D /* Category */ = {
+		19BDD08D20D539FC00C9117D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				19BDD08720D4146200C9117D /* NSString+PPSAddition.h */,
-				19BDD08620D4146200C9117D /* NSString+PPSAddition.m */,
+				19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */,
+				19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		19BDD09020D539FC00C9117D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */,
+				19BDD09220D539FC00C9117D /* NSString+PPSAddition.h */,
 			);
 			path = Category;
 			sourceTree = "<group>";
 		};
-		19BDD08820D4146300C9117D /* Tool */ = {
+		19BDD09320D539FC00C9117D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				19BDD08A20D4146300C9117D /* PPSDataBaseHelper.h */,
-				19BDD08920D4146300C9117D /* PPSDataBaseHelper.m */,
+				19BDD09420D539FC00C9117D /* patient.jpg */,
+				19BDD09520D539FC00C9117D /* positive.png */,
 			);
-			path = Tool;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		19E1516820A4374D001D6E60 = {
@@ -679,6 +693,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				193F259A20B9B2F200F08873 /* Info.plist in Resources */,
+				19BDD09820D539FC00C9117D /* patient.jpg in Resources */,
+				19BDD09920D539FC00C9117D /* positive.png in Resources */,
 				19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */,
 				19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */,
 				19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */,
@@ -767,13 +783,12 @@
 				193F25DF20BB0FD300F08873 /* NSObject+MJProperty.m in Sources */,
 				193F25DA20BB0FD300F08873 /* MJPropertyType.m in Sources */,
 				193F25BA20BAE02E00F08873 /* PPSHomeTableViewDatasource.m in Sources */,
+				19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */,
 				193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
-				19BDD08C20D4146300C9117D /* PPSDataBaseHelper.m in Sources */,
 				193F259920B9B2F200F08873 /* MASViewAttribute.m in Sources */,
 				193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
 				193F259720B9B2F200F08873 /* MASConstraint.m in Sources */,
-				19BDD08B20D4146300C9117D /* NSString+PPSAddition.m in Sources */,
 				193F254720B2AF8300F08873 /* PPSRefreshHeader.m in Sources */,
 				193F25AE20B9B69800F08873 /* AFNetworkReachabilityManager.m in Sources */,
 				193F252C20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m in Sources */,
@@ -796,6 +811,7 @@
 				193F259220B9B2F200F08873 /* MASCompositeConstraint.m in Sources */,
 				193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */,
 				193F25C020BAE1F600F08873 /* PPSHomeModel.m in Sources */,
+				19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */,
 				193F259420B9B2F200F08873 /* MASLayoutConstraint.m in Sources */,
 				193F25DD20BB0FD300F08873 /* NSObject+MJCoding.m in Sources */,
 				193F25E120BB0FD300F08873 /* NSString+MJExtension.m in Sources */,
