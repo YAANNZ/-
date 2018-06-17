@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19186D9C20D6B7A00031CB8F /* PPSAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186D9B20D6B7A00031CB8F /* PPSAnalysisViewController.m */; };
 		193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250220AEC68200F08873 /* PPSHomeViewController.m */; };
 		193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */; };
 		193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250920AEC68200F08873 /* PPSOptionsViewController.m */; };
@@ -83,6 +84,8 @@
 
 /* Begin PBXFileReference section */
 		00666E991F76909CB0DFC444 /* Pods-PositivePersons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositivePersons.release.xcconfig"; path = "Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons.release.xcconfig"; sourceTree = "<group>"; };
+		19186D9A20D6B7A00031CB8F /* PPSAnalysisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSAnalysisViewController.h; sourceTree = "<group>"; };
+		19186D9B20D6B7A00031CB8F /* PPSAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSAnalysisViewController.m; sourceTree = "<group>"; };
 		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
 		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
 		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
@@ -227,12 +230,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19186D9520D6B6B90031CB8F /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				19186D9620D6B6B90031CB8F /* ViewModel */,
+				19186D9720D6B6B90031CB8F /* Controller */,
+				19186D9820D6B6BA0031CB8F /* Model */,
+				19186D9920D6B6BA0031CB8F /* View */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		19186D9620D6B6B90031CB8F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		19186D9720D6B6B90031CB8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19186D9A20D6B7A00031CB8F /* PPSAnalysisViewController.h */,
+				19186D9B20D6B7A00031CB8F /* PPSAnalysisViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19186D9820D6B6BA0031CB8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19186D9920D6B6BA0031CB8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		193F24FF20AEC68200F08873 /* Project */ = {
 			isa = PBXGroup;
 			children = (
 				193F251220AEC68200F08873 /* Base */,
 				193F250020AEC68200F08873 /* Home */,
 				193F250420AEC68200F08873 /* Options */,
+				19186D9520D6B6B90031CB8F /* Analysis */,
 				19BDD09020D539FC00C9117D /* Category */,
 				19BDD09320D539FC00C9117D /* Resource */,
 				19BDD08D20D539FC00C9117D /* Tool */,
@@ -793,6 +838,7 @@
 				193F25AE20B9B69800F08873 /* AFNetworkReachabilityManager.m in Sources */,
 				193F252C20B1D11C00F08873 /* PPSOptionsTableViewDelegate.m in Sources */,
 				193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */,
+				19186D9C20D6B7A00031CB8F /* PPSAnalysisViewController.m in Sources */,
 				193F25AC20B9B69800F08873 /* AFURLSessionManager.m in Sources */,
 				193F259620B9B2F200F08873 /* View+MASAdditions.m in Sources */,
 				193F25BD20BAE16900F08873 /* PPSHomeTableViewCell.m in Sources */,
