@@ -14,9 +14,18 @@
 
 @implementation PPSAnalysisViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:@"" style:UIBarButtonItemStyleDone target:self action:@selector(sharePage)];
+}
+
+// 分享
+- (void)sharePage
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
