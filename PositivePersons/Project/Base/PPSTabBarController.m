@@ -9,6 +9,7 @@
 #import "PPSTabBarController.h"
 #import "PPSHomeViewController.h"
 #import "PPSOptionsViewController.h"
+#import "PPSAnalysisViewController.h"
 
 @interface PPSTabBarController ()
 
@@ -30,6 +31,9 @@
     
     PPSOptionsViewController *optionsVc = [[PPSOptionsViewController alloc] init];
     [self setupOneChildViewController:optionsVc Title:@"Options" normalImg:[UIImage imageNamed:@"Options_unselect"] selImg:[UIImage imageNamed:@"Options_select"]];
+    
+    PPSAnalysisViewController *analysisVc = [[PPSAnalysisViewController alloc] init];
+    [self setupOneChildViewController:analysisVc Title:@"Analysis" normalImg:[UIImage imageNamed:@"Analysis_unselect"] selImg:[UIImage imageNamed:@"Analysis_select"]];
 }
 
 - (void)setupOneChildViewController:(UIViewController *)childVc Title:(NSString *)title normalImg:(UIImage *)normalImg selImg:(UIImage *)selImg
