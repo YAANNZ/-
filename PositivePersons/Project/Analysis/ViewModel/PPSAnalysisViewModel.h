@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PPSTrendView.h"
 
-@interface PPSAnalysisViewModel : NSObject
+typedef void(^Callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
+@interface PPSAnalysisViewModel : NSObject <PPSTrendViewDelegate>
+
+- (void)requesTrendViewDataWithCallback:(Callback)callback;
 
 @end

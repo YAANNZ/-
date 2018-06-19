@@ -16,5 +16,6 @@
 #import "AFNetworking.h"
 #import "PPSHTTPLink.h"
 #import "MJExtension.h"
+#import "PPSDefine.h"
 
 #endif /* PrefixHeader_pch */

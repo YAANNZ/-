@@ -32,7 +32,7 @@
 
 - (void)setupSubviews
 {
-    
+    self.backgroundColor = [UIColor blueColor];
 }
 
 @end

@@ -10,4 +10,9 @@
 
 @implementation PPSAnalysisViewModel
 
+- (void)requesTrendViewDataWithCallback:(Callback)callback
+{
+    
+}
+
 @end

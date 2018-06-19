@@ -15,5 +15,6 @@
 @interface PPSTrendView : UIView
 
 @property (nonatomic, weak) id <PPSTrendViewDelegate> delegate;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end

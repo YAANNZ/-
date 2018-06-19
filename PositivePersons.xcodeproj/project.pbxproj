@@ -103,6 +103,7 @@
 		19186DAB20D8E3E20031CB8F /* PPSTrendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSTrendView.m; sourceTree = "<group>"; };
 		19186DAD20D8E4C80031CB8F /* PPSAnalysisViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSAnalysisViewModel.h; sourceTree = "<group>"; };
 		19186DAE20D8E4C80031CB8F /* PPSAnalysisViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSAnalysisViewModel.m; sourceTree = "<group>"; };
+		19186DB120D8ED2D0031CB8F /* PPSDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSDefine.h; sourceTree = "<group>"; };
 		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
 		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
 		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
@@ -398,6 +399,7 @@
 				193F251620AEC68200F08873 /* PPSTabBarController.m */,
 				193F259B20B9B32000F08873 /* PrefixHeader.pch */,
 				193F25B020B9B74500F08873 /* PPSHTTPLink.h */,
+				19186DB120D8ED2D0031CB8F /* PPSDefine.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
