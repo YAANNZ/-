@@ -14,6 +14,7 @@
 @interface PPSHomeViewController ()
 
 @property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) PPSInputTaskView *inputTaskView;
 @property (nonatomic, strong) PPSHomeTableViewModel *homeTableViewModel;
 @property (nonatomic, strong) PPSHomeTableViewDelegate *tableViewDelegate;
 @property (nonatomic, strong) PPSHomeTableViewDatasource *tableViewDatasource;
@@ -25,9 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStyleDone target:self action:@selector(addTask)];
     
     // UI 初始化
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -50,8 +51,22 @@
     }];
 }
 
+- (void)addTask
+{
+    self.inputTaskView.hidden = NO;
+}
 
-
+#pragma mark - 懒加载
+- (PPSInputTaskView *)inputTaskView
+{
+    if (!_inputTaskView)
+    {
+        _inputTaskView = [[PPSInputTaskView alloc] init];
+        _inputTaskView.delegate = self.homeTableViewModel;
+    }
+    
+    return _inputTaskView;
+}
 
 
 /*

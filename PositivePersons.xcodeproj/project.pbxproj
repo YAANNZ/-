@@ -14,6 +14,8 @@
 		19186DA820D8AA7B0031CB8F /* UIImage+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186DA720D8AA7B0031CB8F /* UIImage+PPSAddition.m */; };
 		19186DAC20D8E3E20031CB8F /* PPSTrendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186DAB20D8E3E20031CB8F /* PPSTrendView.m */; };
 		19186DAF20D8E4C80031CB8F /* PPSAnalysisViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186DAE20D8E4C80031CB8F /* PPSAnalysisViewModel.m */; };
+		19186DC320DA87E30031CB8F /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19186DC220DA87E30031CB8F /* add@3x.png */; };
+		19186DC620DA89930031CB8F /* PPSInputTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186DC520DA89930031CB8F /* PPSInputTaskView.m */; };
 		193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250220AEC68200F08873 /* PPSHomeViewController.m */; };
 		193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */; };
 		193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250920AEC68200F08873 /* PPSOptionsViewController.m */; };
@@ -104,6 +106,9 @@
 		19186DAD20D8E4C80031CB8F /* PPSAnalysisViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSAnalysisViewModel.h; sourceTree = "<group>"; };
 		19186DAE20D8E4C80031CB8F /* PPSAnalysisViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSAnalysisViewModel.m; sourceTree = "<group>"; };
 		19186DB120D8ED2D0031CB8F /* PPSDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSDefine.h; sourceTree = "<group>"; };
+		19186DC220DA87E30031CB8F /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
+		19186DC420DA89930031CB8F /* PPSInputTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSInputTaskView.h; sourceTree = "<group>"; };
+		19186DC520DA89930031CB8F /* PPSInputTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSInputTaskView.m; sourceTree = "<group>"; };
 		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
 		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
 		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
@@ -484,6 +489,8 @@
 			children = (
 				193F25BB20BAE16900F08873 /* PPSHomeTableViewCell.h */,
 				193F25BC20BAE16900F08873 /* PPSHomeTableViewCell.m */,
+				19186DC420DA89930031CB8F /* PPSInputTaskView.h */,
+				19186DC520DA89930031CB8F /* PPSInputTaskView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,6 +575,7 @@
 		19BDD09320D539FC00C9117D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				19186DC220DA87E30031CB8F /* add@3x.png */,
 				19186DA020D89E550031CB8F /* share_sel@3x.png */,
 				19186D9F20D89E550031CB8F /* share_unsel@3x.png */,
 				19BDD09420D539FC00C9117D /* patient.jpg */,
@@ -767,6 +775,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19186DC320DA87E30031CB8F /* add@3x.png in Resources */,
 				193F259A20B9B2F200F08873 /* Info.plist in Resources */,
 				19BDD09820D539FC00C9117D /* patient.jpg in Resources */,
 				19186DA120D89E550031CB8F /* share_unsel@3x.png in Resources */,
@@ -887,6 +896,7 @@
 				193F25AF20B9B69800F08873 /* AFSecurityPolicy.m in Sources */,
 				193F259120B9B2F200F08873 /* ViewController+MASAdditions.m in Sources */,
 				193F25E020BB0FD300F08873 /* NSObject+MJClass.m in Sources */,
+				19186DC620DA89930031CB8F /* PPSInputTaskView.m in Sources */,
 				193F259220B9B2F200F08873 /* MASCompositeConstraint.m in Sources */,
 				193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */,
 				193F25C020BAE1F600F08873 /* PPSHomeModel.m in Sources */,

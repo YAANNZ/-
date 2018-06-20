@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PPSInputTaskView.h"
 
 typedef void(^callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
-@interface PPSHomeTableViewModel : NSObject
+
+@interface PPSHomeTableViewModel : NSObject <PPSInputTaskViewDelegate>
 
 - (void)headerRefreshRequestWithCallback:(callback)callback;
 - (void)footerRefreshRequestWithCallback:(callback)callback;

@@ -39,4 +39,13 @@
 }
 
 
+#pragma mark - PPSInputTaskViewDelegate
+- (void)inputTaskView:(PPSInputTaskView *)inputView finishIuputWithContent:(NSString *)content
+{
+    inputView.hidden = YES;
+    
+    
+}
+
+
 @end
