@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PPSHomeModel.h"
 
 @interface PPSDataBaseHelper : NSObject
 
 + (PPSDataBaseHelper *)shareInstance;
+
+- (void)updateTasksTableWith:(PPSHomeModel *)taskModel;
 
 @end

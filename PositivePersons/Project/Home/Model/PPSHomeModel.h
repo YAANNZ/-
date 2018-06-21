@@ -11,6 +11,7 @@
 @interface PPSHomeModel : NSObject
 
 @property (nonatomic, copy) NSString *taskStr;
-@property (nonatomic, copy) NSString *dateStr;
+@property (nonatomic, copy) NSString *createDate;
+@property (nonatomic, copy) NSString *state;
 
 @end

@@ -43,9 +43,26 @@
 - (void)inputTaskView:(PPSInputTaskView *)inputView finishIuputWithContent:(NSString *)content
 {
     inputView.hidden = YES;
+    UITextField *textField = inputView.subviews.firstObject;
+    textField.text = @"";
     
+    PPSHomeModel *homeModel = [[PPSHomeModel alloc] init];
+    homeModel.taskStr = content;
+    homeModel.state = @"0";
+    homeModel.createDate = [self currentDate];
     
+    PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
+    [dbHelper updateTasksTableWith:homeModel];
 }
 
+- (NSString *)currentDate
+{
+    NSDate *currentDate = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *dateStr = [formatter stringFromDate:currentDate];
+    
+    return dateStr;
+}
 
 @end

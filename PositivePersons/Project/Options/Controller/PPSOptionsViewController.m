@@ -37,6 +37,7 @@
     // 1.初始化
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView = tableView;
+    tableView.tableFooterView = [UIView new];
     [self.view addSubview:tableView];
     
     // 2.数据和业务的分离

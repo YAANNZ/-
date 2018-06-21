@@ -17,6 +17,7 @@
 
 @implementation PPSDataBaseHelper
 
+#pragma mark - initial
 + (PPSDataBaseHelper *)shareInstance
 {
     static PPSDataBaseHelper *dbHelperInstance;
@@ -47,7 +48,22 @@
 
 - (void)createAllTableIfNeed
 {
-    
+    [self.dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        // 任务
+        NSString *tasksSQL = @"CREATE TABLE IF NOT EXISTS t_tasks (id INTEGER PRIMARY KEY AUTOINCREMENT, task BLOB NOT NULL, createDate TEXT NOT NULL, taskStr TEXT NOT NULL, state TEXT NOT NULL);";
+        [db executeUpdate:tasksSQL];
+    }];
+}
+
+#pragma mark - operation
+- (void)updateTasksTableWith:(PPSHomeModel *)taskModel
+{
+    NSMutableDictionary *taskDict = [taskModel mj_keyValues];
+    NSData *taskData = [NSJSONSerialization dataWithJSONObject:taskDict options:NSJSONWritingPrettyPrinted error:nil];
+    [self.dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
+        BOOL isSuccess = [db executeUpdate:@"INSERT INTO t_tasks (task, createDate, taskStr, state) VALUES (?, ?, ?) ;", taskData, taskModel.createDate, taskModel.taskStr, taskModel.state];
+        DLog(@"%d", isSuccess);
+    }];
 }
 
 @end

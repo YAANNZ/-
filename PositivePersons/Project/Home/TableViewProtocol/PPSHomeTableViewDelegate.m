@@ -10,6 +10,12 @@
 
 @implementation PPSHomeTableViewDelegate
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+//    tableView dequeueReusableHeaderFooterViewWithIdentifier:<#(nonnull NSString *)#>
+    return [UIView new];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 50;

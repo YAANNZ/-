@@ -17,5 +17,6 @@
 #import "PPSHTTPLink.h"
 #import "MJExtension.h"
 #import "PPSDefine.h"
+#import "PPSDataBaseHelper.h"
 
 #endif /* PrefixHeader_pch */

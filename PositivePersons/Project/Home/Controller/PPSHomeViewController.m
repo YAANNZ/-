@@ -33,6 +33,7 @@
     // UI 初始化
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.tableView = tableView;
+    tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
     
     // ViewModel--处理数据和业务
@@ -62,7 +63,9 @@
     if (!_inputTaskView)
     {
         _inputTaskView = [[PPSInputTaskView alloc] init];
+        _inputTaskView.frame = CGRectMake(60, (MAINSCREEN_HEIGHT - 90)/2, MAINSCREEN_WIDTH-120, 90);
         _inputTaskView.delegate = self.homeTableViewModel;
+        [self.view addSubview:_inputTaskView];
     }
     
     return _inputTaskView;
