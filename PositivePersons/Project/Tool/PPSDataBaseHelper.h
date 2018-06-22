@@ -14,5 +14,6 @@
 + (PPSDataBaseHelper *)shareInstance;
 
 - (void)updateTasksTableWith:(PPSHomeModel *)taskModel;
+- (NSArray <PPSHomeModel *> *)readTasksTable;
 
 @end

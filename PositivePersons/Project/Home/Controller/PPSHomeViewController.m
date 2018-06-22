@@ -47,11 +47,26 @@
     self.tableView.delegate = self.tableViewDelegate;
     self.tableView.dataSource = self.tableViewDatasource;
     
-    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
-        
+    // 显示本地数据
+    __weak typeof(self) weakself = self;
+    [self.homeTableViewModel requestSqliteDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
+        __strong typeof(self) strongself = weakself;
+        strongself.tableViewDatasource.dataArray = array;
+        [strongself.tableView reloadData];
     }];
     
-    // 获取数据源
+    // 下拉刷新
+//    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
+//        __strong typeof(self) strongself = weakself;
+//        [strongself HeaderRefresh];
+//    }];
+    
+    
+}
+
+- (void)HeaderRefresh
+{
+    // 获取网络数据
     [self.homeTableViewModel headerRefreshRequestWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
         self.tableViewDatasource.dataArray = array;
         [self.tableView reloadData];
@@ -62,6 +77,8 @@
 {
     self.inputTaskView.hidden = NO;
 }
+
+
 
 #pragma mark - 懒加载
 - (PPSInputTaskView *)inputTaskView

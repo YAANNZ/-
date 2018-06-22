@@ -11,6 +11,13 @@
 
 @implementation PPSHomeTableViewModel
 
+- (void)requestSqliteDataWithCallback:(callback)callback
+{
+    PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
+    NSArray *tasksArray = [dbHelper readTasksTable];
+    callback(tasksArray, YES, nil);
+}
+
 - (void)headerRefreshRequestWithCallback:(callback)callback
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
