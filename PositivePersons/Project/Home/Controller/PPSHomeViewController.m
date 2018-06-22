@@ -10,6 +10,7 @@
 #import "PPSHomeTableViewDelegate.h"
 #import "PPSHomeTableViewDatasource.h"
 #import "PPSHomeTableViewModel.h"
+#import "PPSRefreshHeader.h"
 
 @interface PPSHomeViewController ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) PPSHomeTableViewModel *homeTableViewModel;
 @property (nonatomic, strong) PPSHomeTableViewDelegate *tableViewDelegate;
 @property (nonatomic, strong) PPSHomeTableViewDatasource *tableViewDatasource;
+@property (nonatomic, strong) PPSRefreshHeader *refreshHeader;
 
 @end
 
@@ -44,6 +46,10 @@
     self.tableViewDatasource = [[PPSHomeTableViewDatasource alloc] init];
     self.tableView.delegate = self.tableViewDelegate;
     self.tableView.dataSource = self.tableViewDatasource;
+    
+    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
+        
+    }];
     
     // 获取数据源
     [self.homeTableViewModel headerRefreshRequestWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
