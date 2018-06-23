@@ -23,7 +23,7 @@
     static PPSDataBaseHelper *dbHelperInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        dbHelperInstance = [[self alloc] init];
+        dbHelperInstance = [[[self class] alloc] init];
         [dbHelperInstance dbQueue];
     });
     
@@ -64,6 +64,27 @@
         BOOL isSuccess = [db executeUpdate:@"INSERT INTO t_tasks (task, createDate, taskStr, state) VALUES (?, ?, ?) ;", taskData, taskModel.createDate, taskModel.taskStr, taskModel.state];
         DLog(@"%d", isSuccess);
     }];
+}
+
+- (NSArray<PPSHomeModel *> *)readTasksTable
+{
+    NSMutableArray *tasksAry = [NSMutableArray array];
+    [self.dbQueue inDatabase:^(FMDatabase *db) {
+        
+        FMResultSet *resultSet = [db executeQuery:@"SELECT * FROM t_tasks;"];
+        
+        while(resultSet.next)
+        {
+            NSData *data = [resultSet dataForColumn:@"task"];
+            if (data)
+            {
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
+                [tasksAry addObject:[PPSHomeModel mj_objectWithKeyValues:dict]];
+            }
+        }
+        [resultSet close];
+    }];
+    return tasksAry;
 }
 
 @end
