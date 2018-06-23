@@ -20,7 +20,7 @@
 #pragma mark - initial
 + (PPSDataBaseHelper *)shareInstance
 {
-    static PPSDataBaseHelper *dbHelperInstance;
+    static PPSDataBaseHelper *dbHelperInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         dbHelperInstance = [[[self class] alloc] init];
@@ -36,11 +36,11 @@
     {
         NSString *dbQueuePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"xx.sqlite"];
         _dbQueue = [FMDatabaseQueue databaseQueueWithPath:dbQueuePath];
-    }
-    
-    if (_dbQueue)
-    {
-        [self createAllTableIfNeed];
+        
+        if (_dbQueue)
+        {
+            [self createAllTableIfNeed];
+        }
     }
     
     return _dbQueue;
