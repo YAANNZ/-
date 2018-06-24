@@ -11,14 +11,14 @@
 
 @implementation PPSHomeTableViewModel
 
-- (void)requestSqliteDataWithCallback:(callback)callback
+- (void)requestSqliteDataWithCallback:(Callback)callback
 {
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     NSArray *tasksArray = [dbHelper readTasksTable];
     callback(tasksArray, YES, nil);
 }
 
-- (void)headerRefreshRequestWithCallback:(callback)callback
+- (void)headerRefreshRequestWithCallback:(Callback)callback
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager POST:home_allTasks parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -40,7 +40,7 @@
     }];
 }
 
-- (void)footerRefreshRequestWithCallback:(callback)callback
+- (void)footerRefreshRequestWithCallback:(Callback)callback
 {
     
 }
@@ -52,6 +52,8 @@
     inputView.hidden = YES;
     UITextField *textField = inputView.subviews.firstObject;
     textField.text = @"";
+    [textField resignFirstResponder];
+    
     
     PPSHomeModel *homeModel = [[PPSHomeModel alloc] init];
     homeModel.taskStr = content;
@@ -60,6 +62,8 @@
     
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     [dbHelper updateTasksTableWith:homeModel];
+    
+    [self requestSqliteDataWithCallback:self.callback];
 }
 
 - (NSString *)currentDate

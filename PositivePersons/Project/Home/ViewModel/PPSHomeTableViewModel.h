@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "PPSInputTaskView.h"
 
-typedef void(^callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
+typedef void(^Callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
 
 @interface PPSHomeTableViewModel : NSObject <PPSInputTaskViewDelegate>
 
-- (void)requestSqliteDataWithCallback:(callback)callback;
-- (void)headerRefreshRequestWithCallback:(callback)callback;
-- (void)footerRefreshRequestWithCallback:(callback)callback;
+@property (nonatomic, copy) Callback callback;
+
+- (void)requestSqliteDataWithCallback:(Callback)callback;
+- (void)headerRefreshRequestWithCallback:(Callback)callback;
+- (void)footerRefreshRequestWithCallback:(Callback)callback;
 
 @end

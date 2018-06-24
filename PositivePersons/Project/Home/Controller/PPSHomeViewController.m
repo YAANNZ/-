@@ -39,7 +39,12 @@
     [self.view addSubview:self.tableView];
     
     // ViewModel--处理数据和业务
+    __weak typeof(self) weakself = self;
     self.homeTableViewModel = [[PPSHomeTableViewModel alloc] init];
+    self.homeTableViewModel.callback = ^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
+        __strong typeof(self) strongself = weakself;
+        [strongself reloadTableViewWithDataArray:array];
+    };
     
     // 自定义tableView的代理，进一步拆分业务
     self.tableViewDelegate = [[PPSHomeTableViewDelegate alloc] init];
@@ -48,11 +53,9 @@
     self.tableView.dataSource = self.tableViewDatasource;
     
     // 显示本地数据
-    __weak typeof(self) weakself = self;
     [self.homeTableViewModel requestSqliteDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
         __strong typeof(self) strongself = weakself;
-        strongself.tableViewDatasource.dataArray = array;
-        [strongself.tableView reloadData];
+        [strongself reloadTableViewWithDataArray:array];
     }];
     
     // 下拉刷新
@@ -68,11 +71,17 @@
 {
     // 获取网络数据
     [self.homeTableViewModel headerRefreshRequestWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
-        self.tableViewDatasource.dataArray = array;
-        [self.tableView reloadData];
+        [self reloadTableViewWithDataArray:array];
     }];
 }
 
+- (void)reloadTableViewWithDataArray:(NSArray *)array
+{
+    self.tableViewDatasource.dataArray = array;
+    [self.tableView reloadData];
+}
+
+#pragma mark - events
 - (void)addTask
 {
     self.inputTaskView.hidden = NO;
