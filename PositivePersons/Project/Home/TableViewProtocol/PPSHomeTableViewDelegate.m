@@ -22,6 +22,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if (self.dataArray.count == 0)
+    {
+        return 0;
+    }
     return 40;
 }
 
