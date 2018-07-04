@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "PPSInputTaskView.h"
+#import "PPSClockView.h"
 
 typedef void(^Callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
 
-@interface PPSHomeTableViewModel : NSObject <PPSInputTaskViewDelegate>
+
+@interface PPSHomeTableViewModel : NSObject <PPSInputTaskViewDelegate, PPSClockViewDelegate>
 
 @property (nonatomic, copy) Callback callback;
 

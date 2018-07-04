@@ -16,6 +16,7 @@
 
 @property (nonatomic, weak) UITableView *tableView;
 @property (nonatomic, strong) PPSInputTaskView *inputTaskView;
+@property (nonatomic, strong) PPSClockView *clockView;
 @property (nonatomic, strong) PPSHomeTableViewModel *homeTableViewModel;
 @property (nonatomic, strong) PPSHomeTableViewDelegate *tableViewDelegate;
 @property (nonatomic, strong) PPSHomeTableViewDatasource *tableViewDatasource;
@@ -30,7 +31,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add"] style:UIBarButtonItemStyleDone target:self action:@selector(addTask)];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Now" style:UIBarButtonItemStyleDone target:self action:@selector(startClock)];
+    rightBarButtonItem.tintColor = [UIColor blackColor];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     // UI 初始化
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -87,9 +90,9 @@
     self.inputTaskView.hidden = NO;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (void)startClock
 {
-    [self.view endEditing:YES];
+    self.clockView.hidden = NO;
 }
 
 #pragma mark - 懒加载
@@ -106,6 +109,17 @@
     return _inputTaskView;
 }
 
+- (PPSClockView *)clockView
+{
+    if (!_clockView)
+    {
+        _clockView = [[PPSClockView alloc] init];
+        _clockView.frame = CGRectMake(60, (MAINSCREEN_HEIGHT - 190)/2, MAINSCREEN_WIDTH-120, 190);
+        _clockView.delegate = self.homeTableViewModel;
+        [self.view addSubview:_clockView];
+    }
+    return _clockView;
+}
 
 /*
  那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。
