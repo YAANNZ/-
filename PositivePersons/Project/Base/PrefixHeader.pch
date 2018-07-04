@@ -18,5 +18,6 @@
 #import "MJExtension.h"
 #import "PPSDefine.h"
 #import "PPSDataBaseHelper.h"
+#import "UITextView+PPSAddition.h"
 
 #endif /* PrefixHeader_pch */

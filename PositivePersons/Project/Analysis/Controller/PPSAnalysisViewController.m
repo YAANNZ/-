@@ -74,6 +74,13 @@
     [self.analysisViewModel requesTrendViewDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
         trendView.dataArray = array;
     }];
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:webView];
+    webView.scalesPageToFit = YES;
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
 }
 
 // 分享 // https://www.jianshu.com/p/9215f8860af5

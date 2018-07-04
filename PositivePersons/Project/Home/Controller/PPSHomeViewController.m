@@ -87,7 +87,10 @@
     self.inputTaskView.hidden = NO;
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 
 #pragma mark - 懒加载
 - (PPSInputTaskView *)inputTaskView
@@ -95,7 +98,7 @@
     if (!_inputTaskView)
     {
         _inputTaskView = [[PPSInputTaskView alloc] init];
-        _inputTaskView.frame = CGRectMake(60, (MAINSCREEN_HEIGHT - 90)/2, MAINSCREEN_WIDTH-120, 90);
+        _inputTaskView.frame = CGRectMake(60, (MAINSCREEN_HEIGHT - 190)/2, MAINSCREEN_WIDTH-120, 190);
         _inputTaskView.delegate = self.homeTableViewModel;
         [self.view addSubview:_inputTaskView];
     }

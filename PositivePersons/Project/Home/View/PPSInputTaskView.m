@@ -10,7 +10,7 @@
 
 @interface PPSInputTaskView ()
 
-@property (nonatomic, strong) UITextField *taskTextField;
+@property (nonatomic, strong) UITextView *taskTextField;
 @property (nonatomic, strong) UIButton *doneButton;
 
 @end
@@ -39,7 +39,8 @@
 {
     self.backgroundColor = [UIColor lightGrayColor];
     
-    self.taskTextField = [[UITextField alloc] init];
+    self.taskTextField = [[UITextView alloc] init];
+    self.taskTextField.placeholder = @"请添加任务...";
     self.taskTextField.font = [UIFont systemFontOfSize:15];
     self.taskTextField.backgroundColor = [UIColor whiteColor];
     self.taskTextField.layer.borderColor = [UIColor blackColor].CGColor;
@@ -62,7 +63,7 @@
     [self.taskTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(@10);
         make.right.equalTo(@-10);
-        make.height.equalTo(@40);
+        make.height.equalTo(@140);
     }];
     
     [self.doneButton mas_makeConstraints:^(MASConstraintMaker *make) {

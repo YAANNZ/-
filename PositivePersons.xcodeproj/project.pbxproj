@@ -60,6 +60,8 @@
 		193F25E120BB0FD300F08873 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D420BB0FD300F08873 /* NSString+MJExtension.m */; };
 		193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D520BB0FD300F08873 /* MJPropertyKey.m */; };
 		193F25E320BB0FD300F08873 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F25D920BB0FD300F08873 /* MJFoundation.m */; };
+		197DAE9620E47AED002D7B8C /* awesomeResume in Resources */ = {isa = PBXBuildFile; fileRef = 197DAE9520E47AEC002D7B8C /* awesomeResume */; };
+		19911C2920ECC419007C24F4 /* UITextView+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */; };
 		19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */; };
 		19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */; };
 		19BDD09820D539FC00C9117D /* patient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19BDD09420D539FC00C9117D /* patient.jpg */; };
@@ -132,7 +134,6 @@
 		193F254420B2AF8300F08873 /* PPSRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSRefreshHeader.h; sourceTree = "<group>"; };
 		193F254520B2AF8300F08873 /* PPSRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSRefreshFooter.h; sourceTree = "<group>"; };
 		193F255020B69C2C00F08873 /* PPSTestUrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSTestUrl.m; sourceTree = "<group>"; };
-		193F255520B6A06C00F08873 /* PositivePersons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositivePersons.entitlements; sourceTree = "<group>"; };
 		193F257620B9B2F200F08873 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		193F257720B9B2F200F08873 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		193F257820B9B2F200F08873 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -205,6 +206,10 @@
 		193F25D720BB0FD300F08873 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		193F25D820BB0FD300F08873 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		193F25D920BB0FD300F08873 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		197DAE9020E38407002D7B8C /* PositivePersons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositivePersons.entitlements; sourceTree = "<group>"; };
+		197DAE9520E47AEC002D7B8C /* awesomeResume */ = {isa = PBXFileReference; lastKnownFileType = folder; path = awesomeResume; sourceTree = "<group>"; };
+		19911C2720ECC419007C24F4 /* UITextView+PPSAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+PPSAddition.h"; sourceTree = "<group>"; };
+		19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PPSAddition.m"; sourceTree = "<group>"; };
 		19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSDataBaseHelper.m; sourceTree = "<group>"; };
 		19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSDataBaseHelper.h; sourceTree = "<group>"; };
 		19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPSAddition.m"; sourceTree = "<group>"; };
@@ -301,6 +306,7 @@
 		193F24FF20AEC68200F08873 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				197DAE9520E47AEC002D7B8C /* awesomeResume */,
 				193F251220AEC68200F08873 /* Base */,
 				19BDD09020D539FC00C9117D /* Category */,
 				19BDD08D20D539FC00C9117D /* Tool */,
@@ -568,6 +574,8 @@
 				19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */,
 				19186DA620D8AA7B0031CB8F /* UIImage+PPSAddition.h */,
 				19186DA720D8AA7B0031CB8F /* UIImage+PPSAddition.m */,
+				19911C2720ECC419007C24F4 /* UITextView+PPSAddition.h */,
+				19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -609,7 +617,7 @@
 		19E1517320A4374D001D6E60 /* PositivePersons */ = {
 			isa = PBXGroup;
 			children = (
-				193F255520B6A06C00F08873 /* PositivePersons.entitlements */,
+				197DAE9020E38407002D7B8C /* PositivePersons.entitlements */,
 				193F24FF20AEC68200F08873 /* Project */,
 				19E1517A20A4374D001D6E60 /* Main.storyboard */,
 				19E1517D20A4374D001D6E60 /* Assets.xcassets */,
@@ -734,7 +742,7 @@
 								enabled = 1;
 							};
 							com.apple.Siri = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -778,6 +786,7 @@
 				19186DC320DA87E30031CB8F /* add@3x.png in Resources */,
 				193F259A20B9B2F200F08873 /* Info.plist in Resources */,
 				19BDD09820D539FC00C9117D /* patient.jpg in Resources */,
+				197DAE9620E47AED002D7B8C /* awesomeResume in Resources */,
 				19186DA120D89E550031CB8F /* share_unsel@3x.png in Resources */,
 				19BDD09920D539FC00C9117D /* positive.png in Resources */,
 				19186DA220D89E550031CB8F /* share_sel@3x.png in Resources */,
@@ -874,6 +883,7 @@
 				193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
 				193F259920B9B2F200F08873 /* MASViewAttribute.m in Sources */,
+				19911C2920ECC419007C24F4 /* UITextView+PPSAddition.m in Sources */,
 				193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
 				193F259720B9B2F200F08873 /* MASConstraint.m in Sources */,
 				193F254720B2AF8300F08873 /* PPSRefreshHeader.m in Sources */,
@@ -1084,7 +1094,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "68f2f57f-da15-44c7-aa93-47a82dd57b98";
+				PROVISIONING_PROFILE = "77e4f8ba-d896-480f-8d11-f7ba460dec80";
 				PROVISIONING_PROFILE_SPECIFIER = PositivePersons_dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1096,16 +1106,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PositivePersons/PositivePersons.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3RNRBZPDHP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PositivePersons/Project/Base/PrefixHeader.pch";
 				INFOPLIST_FILE = PositivePersons/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "11f26902-463b-4323-9987-4952e5c14ec3";
+				PROVISIONING_PROFILE_SPECIFIER = PositivePersons_dis;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1163,13 +1174,15 @@
 		19E151A520A4374E001D6E60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3RNRBZPDHP;
 				INFOPLIST_FILE = PositivePersonsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.ppsuitests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "51667d93-defe-4271-aed1-a8bcfd8f8f10";
+				PROVISIONING_PROFILE_SPECIFIER = PositivePersonsUITests_dis;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PositivePersons;
 			};

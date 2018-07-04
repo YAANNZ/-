@@ -13,6 +13,7 @@
 #import "PPSOptionsTableViewDelegate.h"
 #import "PPSOptionsTableViewDataSource.h"
 #import "PPSOptionModel.h"
+#import <Security/Security.h>
 
 @interface PPSOptionsViewController ()
 
@@ -23,7 +24,7 @@
 @property (nonatomic, strong) PPSOptionsTableViewModel *tableViewModel;
 @property (nonatomic, strong) PPSOptionsTableViewDataSource *tableViewDataSource;
 @property (nonatomic, strong) PPSOptionsTableViewDelegate *tableViewDelegate;
-
+@property (nonatomic, strong) UIDocumentInteractionController *documentInteractionController;
 @end
 
 @implementation PPSOptionsViewController
@@ -74,8 +75,20 @@
 //        __strong typeof(self) strongSelf = weakSelf;
 //        [strongSelf footerRefreshAction];
 //    };
-}
+    
+    self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]]];
+    self.documentInteractionController.delegate = self;
+    [self.documentInteractionController presentOpenInMenuFromRect:self.view.bounds inView:self.view animated:YES];
 
+//    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[@"123"] applicationActivities:nil];
+//    [self presentViewController:controller animated:YES completion:nil];
+    
+    
+    
+    
+    
+
+}
 
 
 
