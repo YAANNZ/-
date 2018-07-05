@@ -11,6 +11,7 @@
 @interface PPSClockView ()
 
 @property (nonatomic, strong) UITextField *clockField;
+@property (nonatomic, strong) UILabel *unitLabel;
 @property (nonatomic, strong) UIButton *startButton;
 
 @end
@@ -40,12 +41,20 @@
     self.backgroundColor = [UIColor lightGrayColor];
     
     self.clockField = [[UITextField alloc] init];
-    self.clockField.text = @"5";
+    self.clockField.text = @"25";
     self.clockField.font = [UIFont systemFontOfSize:15];
+    self.clockField.textAlignment = NSTextAlignmentCenter;
+//    self.clockField.clearsOnBeginEditing = YES;
     self.clockField.backgroundColor = [UIColor whiteColor];
     self.clockField.layer.borderColor = [UIColor blackColor].CGColor;
     self.clockField.layer.borderWidth = 1.0;
     [self addSubview:self.clockField];
+    
+    self.unitLabel = [[UILabel alloc] init];
+    self.unitLabel.text = @"Min";
+    self.unitLabel.textAlignment = NSTextAlignmentCenter;
+    self.unitLabel.textColor = [UIColor whiteColor];
+    [self addSubview:self.unitLabel];
     
     self.startButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.startButton.layer.cornerRadius = 5;
@@ -62,8 +71,15 @@
 {
     [self.clockField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(@10);
-        make.right.equalTo(@-10);
-        make.height.equalTo(@140);
+        make.width.equalTo(@50);
+        make.height.equalTo(@30);
+    }];
+    
+    [self.unitLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.clockField.mas_right);
+        make.top.equalTo(self.clockField.mas_top);
+        make.width.equalTo(self.clockField.mas_width);
+        make.height.equalTo(self.clockField.mas_height);
     }];
     
     [self.startButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,6 +96,9 @@
     {
         [self.delegate clockView:self startWithDuration:self.clockField.text];
     }
+    
+    [self.clockField resignFirstResponder];
+    self.clockField.text = @"25";
 }
 
 @end

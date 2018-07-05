@@ -93,6 +93,11 @@
 - (void)startClock
 {
     self.clockView.hidden = NO;
+    
+    UITextField *clockField = self.clockView.subviews.firstObject;
+    [clockField becomeFirstResponder];
+    UITextRange *range = [clockField textRangeFromPosition:clockField.beginningOfDocument toPosition:clockField.endOfDocument];
+    [clockField setSelectedTextRange:range];
 }
 
 #pragma mark - 懒加载
@@ -114,10 +119,11 @@
     if (!_clockView)
     {
         _clockView = [[PPSClockView alloc] init];
-        _clockView.frame = CGRectMake(60, (MAINSCREEN_HEIGHT - 190)/2, MAINSCREEN_WIDTH-120, 190);
+        _clockView.frame = CGRectMake((MAINSCREEN_WIDTH-120)/2, (MAINSCREEN_HEIGHT - 80)/2, 120, 80);
         _clockView.delegate = self.homeTableViewModel;
         [self.view addSubview:_clockView];
     }
+    
     return _clockView;
 }
 

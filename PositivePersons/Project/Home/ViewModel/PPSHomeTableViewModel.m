@@ -76,4 +76,13 @@
     return dateStr;
 }
 
+#pragma mark - PPSClockViewDelegate
+- (void)clockView:(PPSClockView *)clockView startWithDuration:(NSString *)duration
+{
+    clockView.hidden = YES;
+    
+//    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:<#(NSTimeInterval)#> repeats:<#(BOOL)#> block:<#^(NSTimer * _Nonnull timer)block#>];
+}
+
+
 @end
