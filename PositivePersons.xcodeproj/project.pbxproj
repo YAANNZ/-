@@ -63,6 +63,8 @@
 		197DAE9620E47AED002D7B8C /* awesomeResume in Resources */ = {isa = PBXBuildFile; fileRef = 197DAE9520E47AEC002D7B8C /* awesomeResume */; };
 		19911C2920ECC419007C24F4 /* UITextView+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */; };
 		19911C2C20ECCEE9007C24F4 /* PPSClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C2B20ECCEE9007C24F4 /* PPSClockView.m */; };
+		19911C3A20EE14FB007C24F4 /* UITextField+DITAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C3820EE14FB007C24F4 /* UITextField+DITAddtion.m */; };
+		19911C3D20EE1930007C24F4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C3B20EE1930007C24F4 /* UIView+Extension.m */; };
 		19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */; };
 		19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */; };
 		19BDD09820D539FC00C9117D /* patient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19BDD09420D539FC00C9117D /* patient.jpg */; };
@@ -213,6 +215,10 @@
 		19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PPSAddition.m"; sourceTree = "<group>"; };
 		19911C2A20ECCEE9007C24F4 /* PPSClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSClockView.h; sourceTree = "<group>"; };
 		19911C2B20ECCEE9007C24F4 /* PPSClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSClockView.m; sourceTree = "<group>"; };
+		19911C3820EE14FB007C24F4 /* UITextField+DITAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+DITAddtion.m"; sourceTree = "<group>"; };
+		19911C3920EE14FB007C24F4 /* UITextField+DITAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+DITAddtion.h"; sourceTree = "<group>"; };
+		19911C3B20EE1930007C24F4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		19911C3C20EE1930007C24F4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSDataBaseHelper.m; sourceTree = "<group>"; };
 		19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSDataBaseHelper.h; sourceTree = "<group>"; };
 		19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPSAddition.m"; sourceTree = "<group>"; };
@@ -575,6 +581,10 @@
 		19BDD09020D539FC00C9117D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				19911C3C20EE1930007C24F4 /* UIView+Extension.h */,
+				19911C3B20EE1930007C24F4 /* UIView+Extension.m */,
+				19911C3920EE14FB007C24F4 /* UITextField+DITAddtion.h */,
+				19911C3820EE14FB007C24F4 /* UITextField+DITAddtion.m */,
 				19BDD09220D539FC00C9117D /* NSString+PPSAddition.h */,
 				19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */,
 				19186DA620D8AA7B0031CB8F /* UIImage+PPSAddition.h */,
@@ -902,11 +912,13 @@
 				193F25BD20BAE16900F08873 /* PPSHomeTableViewCell.m in Sources */,
 				193F25AB20B9B69800F08873 /* AFHTTPSessionManager.m in Sources */,
 				193F25E320BB0FD300F08873 /* MJFoundation.m in Sources */,
+				19911C3A20EE14FB007C24F4 /* UITextField+DITAddtion.m in Sources */,
 				193F259320B9B2F200F08873 /* MASConstraintMaker.m in Sources */,
 				193F251D20AEC68300F08873 /* PPSTabBarController.m in Sources */,
 				193F251A20AEC68300F08873 /* PPSOptionModel.m in Sources */,
 				193F25B720BADFF700F08873 /* PPSHomeTableViewDelegate.m in Sources */,
 				193F25DC20BB0FD300F08873 /* MJProperty.m in Sources */,
+				19911C3D20EE1930007C24F4 /* UIView+Extension.m in Sources */,
 				193F259020B9B2F200F08873 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */,
 				193F25AF20B9B69800F08873 /* AFSecurityPolicy.m in Sources */,

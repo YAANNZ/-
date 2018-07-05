@@ -41,7 +41,7 @@
     self.backgroundColor = [UIColor lightGrayColor];
     
     self.clockField = [[UITextField alloc] init];
-    self.clockField.text = @"25";
+    self.clockField.defaultText = @"25";
     self.clockField.font = [UIFont systemFontOfSize:15];
     self.clockField.textAlignment = NSTextAlignmentCenter;
 //    self.clockField.clearsOnBeginEditing = YES;
