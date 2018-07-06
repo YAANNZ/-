@@ -15,6 +15,9 @@
 {
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     NSArray *tasksArray = [dbHelper readTasksTable];
+    
+    
+    
     callback(tasksArray, YES, nil);
 }
 

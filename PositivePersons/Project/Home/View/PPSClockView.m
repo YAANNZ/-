@@ -41,10 +41,11 @@
     self.backgroundColor = [UIColor lightGrayColor];
     
     self.clockField = [[UITextField alloc] init];
-    self.clockField.defaultText = @"25";
+    self.clockField.text = @"25";
     self.clockField.font = [UIFont systemFontOfSize:15];
     self.clockField.textAlignment = NSTextAlignmentCenter;
 //    self.clockField.clearsOnBeginEditing = YES;
+    self.clockField.keyboardType = UIKeyboardTypeNumberPad;
     self.clockField.backgroundColor = [UIColor whiteColor];
     self.clockField.layer.borderColor = [UIColor blackColor].CGColor;
     self.clockField.layer.borderWidth = 1.0;

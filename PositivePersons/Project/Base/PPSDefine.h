@@ -29,4 +29,13 @@
 
 #endif
 
+/*
+ Home
+ */
+#define TasksInProgressState    @"进行中"
+#define TasksFinishedState      @"已完成"
+
+
+
+
 #endif /* PPSDefine_h */

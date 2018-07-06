@@ -93,11 +93,6 @@
 - (void)startClock
 {
     self.clockView.hidden = NO;
-    
-    UITextField *clockField = self.clockView.subviews.firstObject;
-    [clockField becomeFirstResponder];
-    UITextRange *range = [clockField textRangeFromPosition:clockField.beginningOfDocument toPosition:clockField.endOfDocument];
-    [clockField setSelectedTextRange:range];
 }
 
 #pragma mark - 懒加载
