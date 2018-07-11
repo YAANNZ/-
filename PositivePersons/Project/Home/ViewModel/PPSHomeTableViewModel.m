@@ -16,6 +16,21 @@
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     NSArray *tasksArray = [dbHelper readTasksTable];
     
+    NSMutableArray *inProgressTasksAry = [NSMutableArray array];
+    NSMutableArray *finishedStateTasksAry = [NSMutableArray array];
+    
+    for (PPSHomeModel *taskModel in tasksArray)
+    {
+        if ([taskModel.state isEqualToString:TasksInProgressState])
+        {
+            [inProgressTasksAry addObject:taskModel];
+        }
+        else if ([taskModel.state isEqualToString:TasksFinishedState])
+        {
+            [finishedStateTasksAry addObject:taskModel];
+        }
+    }
+    
     
     
     callback(tasksArray, YES, nil);
