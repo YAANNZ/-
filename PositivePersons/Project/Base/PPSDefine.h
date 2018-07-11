@@ -32,9 +32,14 @@
 /*
  Home
  */
-#define TasksInProgressState    @"进行中"
-#define TasksFinishedState      @"已完成"
-
+#define TasksInProgressState    @"InProgress"
+#define TasksFinishedState      @"Finished"
+#define InProgressTasksTitleKey    @"InProgressTasksTitleKey"
+#define FinishedTasksTitleKey      @"FinishedTasksTitleKey"
+#define InProgressTasksTitleValue    @"进行中"
+#define FinishedTasksTitleValue     @"已完成"
+#define InProgressTasksAryKey    @"InProgressTasksAryKey"
+#define FinishedTasksAryKey      @"FinishedTasksAryKey"
 
 
 

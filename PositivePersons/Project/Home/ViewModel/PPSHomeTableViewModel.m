@@ -17,7 +17,7 @@
     NSArray *tasksArray = [dbHelper readTasksTable];
     
     NSMutableArray *inProgressTasksAry = [NSMutableArray array];
-    NSMutableArray *finishedStateTasksAry = [NSMutableArray array];
+    NSMutableArray *finishedTasksAry = [NSMutableArray array];
     
     for (PPSHomeModel *taskModel in tasksArray)
     {
@@ -27,13 +27,21 @@
         }
         else if ([taskModel.state isEqualToString:TasksFinishedState])
         {
-            [finishedStateTasksAry addObject:taskModel];
+            [finishedTasksAry addObject:taskModel];
         }
     }
     
+    NSMutableDictionary *inProgressTasksDict = [NSMutableDictionary dictionary];
+    inProgressTasksDict[InProgressTasksTitleKey] = InProgressTasksTitleValue;
+    inProgressTasksDict[InProgressTasksAryKey] = inProgressTasksAry;
     
+    NSMutableDictionary *finishedTasksDict = [NSMutableDictionary dictionary];
+    finishedTasksDict[FinishedTasksTitleKey] = FinishedTasksTitleValue;
+    finishedTasksDict[FinishedTasksAryKey] = finishedTasksAry;
     
-    callback(tasksArray, YES, nil);
+    NSArray *realTasksAry = [NSArray arrayWithObjects:inProgressTasksDict, finishedTasksDict, nil];
+    
+    callback(realTasksAry, YES, nil);
 }
 
 - (void)headerRefreshRequestWithCallback:(Callback)callback
