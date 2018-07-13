@@ -10,11 +10,61 @@
 #import "PPSHomeModel.h"
 
 @implementation PPSHomeTableViewModel
-
-- (void)requestSqliteDataWithCallback:(Callback)callback
+// 读取数据库
+- (void)requestSqliteData
 {
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     NSArray *tasksArray = [dbHelper readTasksTable];
+    
+    [self FormatDataAndPostNotificationWithArray:tasksArray errorDescription:nil];
+}
+
+// 下拉刷新
+- (void)headerRefreshRequest
+{
+    __weak typeof (self) weakself = self;
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:home_allTasks parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        __strong typeof (weakself) strongself = weakself;
+        if ([responseObject[@"flag"] integerValue] == 0)
+        {
+            NSArray *dataAry = [PPSHomeModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
+            [strongself FormatDataAndPostNotificationWithArray:dataAry errorDescription:nil];
+        }
+        else
+        {
+            [strongself FormatDataAndPostNotificationWithArray:nil errorDescription:responseObject[@"msg"]];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        __strong typeof (weakself) strongself = weakself;
+        [strongself FormatDataAndPostNotificationWithArray:nil errorDescription:error.localizedDescription];
+        DLog(@"%@", error.localizedDescription);
+    }];
+}
+
+- (void)footerRefreshRequest
+{
+    
+}
+
+// 整理数据并通知 controller 更新 UI
+- (void)FormatDataAndPostNotificationWithArray:(NSArray *)tasksArray errorDescription:(NSString *)errorDescription
+{
+    NSMutableDictionary *resultDict = [NSMutableDictionary dictionary];
+    
+    if (!tasksArray)
+    {
+        resultDict[ErrorLocalDiscription] = errorDescription;
+        resultDict[StateCode] = @"1";
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:PPSHomeTableViewNeedReload object:nil userInfo:resultDict];
+        
+        return;
+    }
     
     NSMutableArray *inProgressTasksAry = [NSMutableArray array];
     NSMutableArray *finishedTasksAry = [NSMutableArray array];
@@ -40,37 +90,10 @@
     finishedTasksDict[FinishedTasksAryKey] = finishedTasksAry;
     
     NSArray *realTasksAry = [NSArray arrayWithObjects:inProgressTasksDict, finishedTasksDict, nil];
-    
-    callback(realTasksAry, YES, nil);
-}
 
-- (void)headerRefreshRequestWithCallback:(Callback)callback
-{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:home_allTasks parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if ([responseObject[@"flag"] integerValue] == 0)
-        {
-            NSArray *dataAry = [PPSHomeModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-            callback(dataAry, YES, nil);
-        }
-        else
-        {
-            callback(nil, NO, responseObject[@"msg"]);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        callback(nil, NO, error.localizedDescription);
-        NSLog(@"%@", error.localizedDescription);
-    }];
+    resultDict[StateCode] = @"0";
+    [[NSNotificationCenter defaultCenter] postNotificationName:PPSHomeTableViewNeedReload object:realTasksAry userInfo:resultDict];
 }
-
-- (void)footerRefreshRequestWithCallback:(Callback)callback
-{
-    
-}
-
 
 #pragma mark - PPSInputTaskViewDelegate
 - (void)inputTaskView:(PPSInputTaskView *)inputView finishIuputWithContent:(NSString *)content
@@ -80,7 +103,6 @@
     textField.text = @"";
     [textField resignFirstResponder];
     
-    
     PPSHomeModel *homeModel = [[PPSHomeModel alloc] init];
     homeModel.taskStr = content;
     homeModel.state = @"0";
@@ -89,7 +111,7 @@
     PPSDataBaseHelper *dbHelper = [PPSDataBaseHelper shareInstance];
     [dbHelper updateTasksTableWith:homeModel];
     
-    [self requestSqliteDataWithCallback:self.callback];
+    [self requestSqliteData];
 }
 
 - (NSString *)currentDate

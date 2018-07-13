@@ -41,6 +41,9 @@
 #define InProgressTasksAryKey    @"InProgressTasksAryKey"
 #define FinishedTasksAryKey      @"FinishedTasksAryKey"
 
+#define PPSHomeTableViewNeedReload @"PPSHomeTableViewNeedReload"
+#define StateCode @"stateCode"
+#define ErrorLocalDiscription @"ErrorLocalDiscription"
 
 
 #endif /* PPSDefine_h */

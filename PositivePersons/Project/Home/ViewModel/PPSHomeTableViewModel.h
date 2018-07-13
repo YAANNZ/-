@@ -10,15 +10,19 @@
 #import "PPSInputTaskView.h"
 #import "PPSClockView.h"
 
-typedef void(^Callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
+//typedef void(^Callback)(NSArray *array, BOOL isSuccess, NSString *errorStr);
 
 
 @interface PPSHomeTableViewModel : NSObject <PPSInputTaskViewDelegate, PPSClockViewDelegate>
 
-@property (nonatomic, copy) Callback callback;
+//@property (nonatomic, copy) Callback callback;
 
-- (void)requestSqliteDataWithCallback:(Callback)callback;
-- (void)headerRefreshRequestWithCallback:(Callback)callback;
-- (void)footerRefreshRequestWithCallback:(Callback)callback;
+//- (void)requestSqliteDataWithCallback:(Callback)callback;
+//- (void)headerRefreshRequestWithCallback:(Callback)callback;
+//- (void)footerRefreshRequestWithCallback:(Callback)callback;
+
+- (void)requestSqliteData;
+- (void)headerRefreshRequest;
+- (void)footerRefreshRequest;
 
 @end

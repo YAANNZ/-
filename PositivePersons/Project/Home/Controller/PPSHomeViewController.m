@@ -41,46 +41,34 @@
     tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
     
-    // ViewModel--处理数据和业务
-    __weak typeof(self) weakself = self;
+    // ViewModel - 处理数据和业务
     self.homeTableViewModel = [[PPSHomeTableViewModel alloc] init];
-    self.homeTableViewModel.callback = ^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
-        __strong typeof(self) strongself = weakself;
-        [strongself reloadTableViewWithDataArray:array];
-    };
     
-    // 自定义tableView的代理，进一步拆分业务
+    // 自定义 tableView 的代理，进一步拆分业务
     self.tableViewDelegate = [[PPSHomeTableViewDelegate alloc] init];
     self.tableViewDatasource = [[PPSHomeTableViewDatasource alloc] init];
     self.tableView.delegate = self.tableViewDelegate;
     self.tableView.dataSource = self.tableViewDatasource;
     
     // 显示本地数据
-    [self.homeTableViewModel requestSqliteDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
-        __strong typeof(self) strongself = weakself;
-        [strongself reloadTableViewWithDataArray:array];
-    }];
-    
+    [self.homeTableViewModel requestSqliteData];
+
     // 下拉刷新
-//    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
-//        __strong typeof(self) strongself = weakself;
-//        [strongself HeaderRefresh];
-//    }];
-    
-    
-}
-
-- (void)HeaderRefresh
-{
-    // 获取网络数据
-    [self.homeTableViewModel headerRefreshRequestWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
-        [self reloadTableViewWithDataArray:array];
+    __weak typeof(self) weakself = self;
+    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
+        __strong typeof(self) strongself = weakself;
+        [strongself.homeTableViewModel headerRefreshRequest];
     }];
+    
+    // 接收 viewModel 对数据处理后的反馈，调整 UI
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:PPSHomeTableViewNeedReload object:self.homeTableViewModel];
 }
 
-- (void)reloadTableViewWithDataArray:(NSArray *)array
+- (void)reloadTableView:(NSNotification *)notification
 {
-    self.tableViewDatasource.dataArray = array;
+    NSLog(@"%@", notification.userInfo);
+    NSLog(@"%@", notification.object);
+//    self.tableViewDatasource.dataArray = array;
     [self.tableView reloadData];
 }
 
