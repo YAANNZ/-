@@ -13,19 +13,21 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    NSDictionary *tasksDict = self.dataArray[section];
+    return [tasksDict[PPSHomeTasksAryKey] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     PPSHomeTableViewCell *cell = [PPSHomeTableViewCell cellWithTableView:tableView];
-    cell.dataModel = self.dataArray[indexPath.row];
+    NSDictionary *tasksDict = self.dataArray[indexPath.section];
+    cell.dataModel = [tasksDict[PPSHomeTasksAryKey] objectAtIndex:indexPath.row];
     return cell;
 }
 

@@ -54,11 +54,11 @@
     [self.homeTableViewModel requestSqliteData];
 
     // 下拉刷新
-    __weak typeof(self) weakself = self;
-    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
-        __strong typeof(self) strongself = weakself;
-        [strongself.homeTableViewModel headerRefreshRequest];
-    }];
+//    __weak typeof(self) weakself = self;
+//    self.refreshHeader = [PPSRefreshHeader headerWithScrollView:self.tableView RefreshingAction:^{
+//        __strong typeof(self) strongself = weakself;
+//        [strongself.homeTableViewModel headerRefreshRequest];
+//    }];
     
     // 接收 viewModel 对数据处理后的反馈，调整 UI
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:PPSHomeTableViewNeedReload object:self.homeTableViewModel];

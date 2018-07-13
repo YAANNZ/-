@@ -82,12 +82,12 @@
     }
     
     NSMutableDictionary *inProgressTasksDict = [NSMutableDictionary dictionary];
-    inProgressTasksDict[InProgressTasksTitleKey] = InProgressTasksTitleValue;
-    inProgressTasksDict[InProgressTasksAryKey] = inProgressTasksAry;
+    inProgressTasksDict[PPSHomeTasksTitleKey] = InProgressTasksTitleValue;
+    inProgressTasksDict[PPSHomeTasksAryKey] = inProgressTasksAry;
     
     NSMutableDictionary *finishedTasksDict = [NSMutableDictionary dictionary];
-    finishedTasksDict[FinishedTasksTitleKey] = FinishedTasksTitleValue;
-    finishedTasksDict[FinishedTasksAryKey] = finishedTasksAry;
+    finishedTasksDict[PPSHomeTasksTitleKey] = FinishedTasksTitleValue;
+    finishedTasksDict[PPSHomeTasksAryKey] = finishedTasksAry;
     
     NSArray *realTasksAry = [NSArray arrayWithObjects:inProgressTasksDict, finishedTasksDict, nil];
 

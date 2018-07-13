@@ -34,12 +34,12 @@
  */
 #define TasksInProgressState    @"InProgress"
 #define TasksFinishedState      @"Finished"
-#define InProgressTasksTitleKey    @"InProgressTasksTitleKey"
-#define FinishedTasksTitleKey      @"FinishedTasksTitleKey"
+
+#define PPSHomeTasksTitleKey    @"PPSHomeTasksTitleKey"
 #define InProgressTasksTitleValue    @"进行中"
 #define FinishedTasksTitleValue     @"已完成"
-#define InProgressTasksAryKey    @"InProgressTasksAryKey"
-#define FinishedTasksAryKey      @"FinishedTasksAryKey"
+#define PPSHomeTasksAryKey    @"PPSHomeTasksAryKey"
+
 
 #define PPSHomeTableViewNeedReload @"PPSHomeTableViewNeedReload"
 #define StateCode @"stateCode"
