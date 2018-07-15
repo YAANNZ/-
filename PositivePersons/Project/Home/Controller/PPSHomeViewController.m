@@ -68,9 +68,19 @@
 {
     NSLog(@"%@", notification.userInfo);
     NSLog(@"%@", notification.object);
-//    self.tableViewDatasource.dataArray = array;
-    [self.tableView reloadData];
+    
+    NSDictionary *resultDict = notification.userInfo;
+    if ([resultDict[StateCode] integerValue] == 0)
+    {
+        self.tableViewDatasource.dataArray = notification.object;
+        [self.tableView reloadData];
+    }
+    else
+    {
+//        show(resultDict[ErrorLocalDiscription]);
+    }
 }
+
 
 #pragma mark - events
 - (void)addTask
