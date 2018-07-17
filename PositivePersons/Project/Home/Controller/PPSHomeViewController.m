@@ -62,6 +62,25 @@
     
     // 接收 viewModel 对数据处理后的反馈，调整 UI
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:PPSHomeTableViewNeedReload object:self.homeTableViewModel];
+    
+//    dispatch_queue_t concurrent = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(concurrent, ^{
+//        NSLog(@"0000");
+//        dispatch_async(concurrent, ^{
+//            NSLog(@"1111");
+//        });
+//        NSLog(@"2222");
+//    });
+//    NSLog(@"3333");
+    
+//    dispatch_queue_t concurrent = dispatch_queue_create("tests", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(concurrent, ^{
+//        NSLog(@"%@", [NSThread currentThread]);
+//        dispatch_sync(concurrent, ^{
+//            NSLog(@"%@", [NSThread currentThread]);
+//        });
+//    });
+    
 }
 
 - (void)reloadTableView:(NSNotification *)notification

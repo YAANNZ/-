@@ -75,7 +75,7 @@
         trendView.dataArray = array;
     }];
     
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, MAINSCREEN_WIDTH, MAINSCREEN_HEIGHT - 64 - 49)];
     [self.view addSubview:webView];
     webView.scalesPageToFit = YES;
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]];

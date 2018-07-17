@@ -10,10 +10,12 @@
 
 @implementation PPSHomeTableViewDelegate
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    return [UIView new];
-//}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *headerLabel = [[UILabel alloc] init];
+    headerLabel.text = [self.dataArray[section] objectForKey:PPSHomeTasksTitleKey];
+    return headerLabel;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -22,7 +24,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (self.dataArray.count == 0)
+    if (self.dataArray.count == 0 && section)
     {
         return 0;
     }

@@ -51,7 +51,7 @@
     self.tableView.dataSource = self.tableViewDataSource;
     
     // temp
-    self.tableViewDataSource.dataArray = [PPSOptionModel mj_objectArrayWithKeyValuesArray:@[@{@"contentStr": @"时间正在一分一秒的流逝啊"},@{@"contentStr": @"过去的永不再回来"}, @{@"contentStr": @"你感到遗憾吗"}, @{@"contentStr": @"而此刻也正在变成过去"}]];
+    self.tableViewDataSource.dataArray = [PPSOptionModel mj_objectArrayWithKeyValuesArray:@[@{@"contentStr": @"时间正在一分一秒的流逝"},@{@"contentStr": @"过去的永不再回来"}, @{@"contentStr": @"你感到遗憾吗"}, @{@"contentStr": @"而此刻也正在变成过去"}]];
     
     //    YiRefreshHeader  头部刷新按钮的使用
 //    self.refreshHeader = [[PPSRefreshHeader alloc] init];
