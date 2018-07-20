@@ -50,6 +50,9 @@
     self.tableView.delegate = self.tableViewDelegate;
     self.tableView.dataSource = self.tableViewDatasource;
     
+    // 接收 viewModel 对数据处理后的反馈，调整 UI
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:PPSHomeTableViewNeedReload object:nil];
+    
     // 显示本地数据
     [self.homeTableViewModel requestSqliteData];
 
@@ -60,8 +63,7 @@
 //        [strongself.homeTableViewModel headerRefreshRequest];
 //    }];
     
-    // 接收 viewModel 对数据处理后的反馈，调整 UI
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView:) name:PPSHomeTableViewNeedReload object:self.homeTableViewModel];
+
     
 //    dispatch_queue_t concurrent = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
 //    dispatch_async(concurrent, ^{
@@ -143,6 +145,10 @@
  那时我们有梦，关于文学，关于爱情，关于穿越世界的旅行。如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。
  */
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:PPSHomeTableViewNeedReload object:self.homeTableViewModel];
+}
 
 
 - (void)didReceiveMemoryWarning {

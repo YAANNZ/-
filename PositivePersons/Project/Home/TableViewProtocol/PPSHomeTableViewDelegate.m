@@ -14,6 +14,7 @@
 {
     UILabel *headerLabel = [[UILabel alloc] init];
     headerLabel.text = [self.dataArray[section] objectForKey:PPSHomeTasksTitleKey];
+    headerLabel.frame = CGRectMake(0, 0, MAINSCREEN_WIDTH, 40);
     return headerLabel;
 }
 
