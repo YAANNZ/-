@@ -94,6 +94,7 @@
     if ([resultDict[StateCode] integerValue] == 0)
     {
         self.tableViewDatasource.dataArray = notification.object;
+        self.tableViewDelegate.dataArray = notification.object;
         [self.tableView reloadData];
     }
     else

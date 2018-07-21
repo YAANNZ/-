@@ -13,8 +13,15 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel *headerLabel = [[UILabel alloc] init];
-    headerLabel.text = [self.dataArray[section] objectForKey:PPSHomeTasksTitleKey];
-    headerLabel.frame = CGRectMake(0, 0, MAINSCREEN_WIDTH, 40);
+    NSDictionary *dataDict = self.dataArray[section];
+    headerLabel.textColor = [UIColor blackColor];
+    headerLabel.backgroundColor = [UIColor colorWithRed:237/255.0 green:237/255.0 blue:237/255.0 alpha:1.0];
+    
+    if (section == 0 || [[dataDict objectForKey:PPSHomeTasksAryKey] count] != 0)
+    {
+        headerLabel.text = [self.dataArray[section] objectForKey:PPSHomeTasksTitleKey];
+    }
+    
     return headerLabel;
 }
 
@@ -25,9 +32,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (self.dataArray.count == 0 && section)
+    if (section)
     {
-        return 0;
+        NSDictionary *finishtDict = self.dataArray[section];
+        if ([[finishtDict objectForKey:PPSHomeTasksAryKey] count] == 0)
+        {
+            return CGFLOAT_MIN;
+        }
     }
     return 40;
 }
