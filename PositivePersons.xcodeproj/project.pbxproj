@@ -74,6 +74,7 @@
 		19E1518420A4374D001D6E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518320A4374D001D6E60 /* main.m */; };
 		19E1518E20A4374D001D6E60 /* PositivePersonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1518D20A4374D001D6E60 /* PositivePersonsTests.m */; };
 		19E1519920A4374E001D6E60 /* PositivePersonsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */; };
+		19FD430F2104AB20008878CF /* PPSHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD430E2104AB20008878CF /* PPSHomeHeaderView.m */; };
 		42129A99465F8C1F712115C3 /* libPods-PositivePersons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B79EB732C51B29357289897 /* libPods-PositivePersons.a */; };
 /* End PBXBuildFile section */
 
@@ -234,6 +235,8 @@
 		19E1519420A4374E001D6E60 /* PositivePersonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PositivePersonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1519820A4374E001D6E60 /* PositivePersonsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositivePersonsUITests.m; sourceTree = "<group>"; };
 		19E1519A20A4374E001D6E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19FD430D2104AB20008878CF /* PPSHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSHomeHeaderView.h; sourceTree = "<group>"; };
+		19FD430E2104AB20008878CF /* PPSHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSHomeHeaderView.m; sourceTree = "<group>"; };
 		7B79EB732C51B29357289897 /* libPods-PositivePersons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PositivePersons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54D0C87A234CAED2A7A2962 /* Pods-PositivePersons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PositivePersons.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PositivePersons/Pods-PositivePersons.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -505,6 +508,8 @@
 				19186DC520DA89930031CB8F /* PPSInputTaskView.m */,
 				19911C2A20ECCEE9007C24F4 /* PPSClockView.h */,
 				19911C2B20ECCEE9007C24F4 /* PPSClockView.m */,
+				19FD430D2104AB20008878CF /* PPSHomeHeaderView.h */,
+				19FD430E2104AB20008878CF /* PPSHomeHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -890,6 +895,7 @@
 				19186DA520D8A0D70031CB8F /* PPSBlogViewController.m in Sources */,
 				193F25DA20BB0FD300F08873 /* MJPropertyType.m in Sources */,
 				193F25BA20BAE02E00F08873 /* PPSHomeTableViewDatasource.m in Sources */,
+				19FD430F2104AB20008878CF /* PPSHomeHeaderView.m in Sources */,
 				19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */,
 				193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,

@@ -29,7 +29,7 @@
         make.top.bottom.right.equalTo(@0);
     }];
     [addTaskBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@5);
+        make.top                                            .equalTo(@5);
         make.bottom.equalTo(@-5);
         make.right.equalTo(@-10);
     }];
