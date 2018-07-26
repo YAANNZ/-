@@ -24,10 +24,15 @@
 {
     if (self = [super initWithCoder:aDecoder])
     {
-    
+        [self setupSubviews];
     }
     
     return self;
+}
+
+- (void)setupSubviews
+{
+    
 }
 
 @end
