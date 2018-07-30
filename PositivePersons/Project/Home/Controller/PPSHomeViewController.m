@@ -82,7 +82,6 @@
 //            NSLog(@"%@", [NSThread currentThread]);
 //        });
 //    });
-    
 }
 
 - (void)reloadTableView:(NSNotification *)notification

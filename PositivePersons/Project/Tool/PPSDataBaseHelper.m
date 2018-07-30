@@ -61,7 +61,7 @@
     NSMutableDictionary *taskDict = [taskModel mj_keyValues];
     NSData *taskData = [NSJSONSerialization dataWithJSONObject:taskDict options:NSJSONWritingPrettyPrinted error:nil];
     [self.dbQueue inDatabase:^(FMDatabase * _Nonnull db) {
-        BOOL isSuccess = [db executeUpdate:@"INSERT INTO t_tasks (task, createDate, taskStr, state) VALUES (?, ?, ?, ?) ;", taskData, taskModel.createDate, taskModel.taskStr, taskModel.state];
+        BOOL isSuccess = [db executeUpdate:@"INSERT INTO t_tasks (task, createDate, taskStr, state) VALUES (?, ?, ?, ?);", taskData, taskModel.createDate, taskModel.taskStr, taskModel.state];
         DLog(@"%d", isSuccess);
     }];
 }
