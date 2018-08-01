@@ -8,21 +8,29 @@
 
 #import "PPSHomeHeaderView.h"
 
+@interface PPSHomeHeaderView ()
+
+@property (nonatomic, weak) UILabel *headerLabel;
+
+@end
+
 @implementation PPSHomeHeaderView
 
-- (instancetype)initWithFrame:(CGRect)frame
++ (PPSHomeHeaderView *)homeHeaderViewWithTableView:(UITableView *)tableView
 {
-    if (self = [super initWithFrame:frame])
-    {
-        
-    }
+    static NSString *homeHeaderViewID = @"homeHeaderView";
     
-    return self;
+    PPSHomeHeaderView *homeHeaderView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:homeHeaderViewID];
+    if (!homeHeaderView)
+    {
+        homeHeaderView = [[PPSHomeHeaderView alloc] initWithReuseIdentifier:homeHeaderViewID];
+    }
+    return homeHeaderView;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self = [super initWithCoder:aDecoder])
+    if (self = [super initWithReuseIdentifier:reuseIdentifier])
     {
         [self setupSubviews];
     }
@@ -36,12 +44,13 @@
     
     UILabel *headerLabel = [[UILabel alloc] init];
     headerLabel.textColor = [UIColor blackColor];
-    [self addSubview:headerLabel];
+    self.headerLabel = headerLabel;
+    [self.contentView addSubview:headerLabel];
     
     UIButton *addTaskBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [addTaskBtn setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
     [addTaskBtn addTarget:self action:@selector(addTaskBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:addTaskBtn];
+    [self.contentView addSubview:addTaskBtn];
     
     // 约束
     [headerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -53,6 +62,13 @@
         make.bottom.equalTo(@-5);
         make.right.equalTo(@-10);
     }];
+}
+
+- (void)setTitleString:(NSString *)titleString
+{
+    _titleString = titleString;
+    
+    self.headerLabel.text = titleString;
 }
 
 - (void)addTaskBtnClicked:(UIButton *)taskBtn

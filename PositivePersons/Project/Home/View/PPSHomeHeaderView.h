@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PPSHomeHeaderView : UIView
+@interface PPSHomeHeaderView : UITableViewHeaderFooterView
+
+@property (nonatomic, copy) NSString *titleString;
+
++ (PPSHomeHeaderView *)homeHeaderViewWithTableView:(UITableView *)tableView;
 
 @end
