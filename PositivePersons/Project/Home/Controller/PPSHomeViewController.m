@@ -82,6 +82,8 @@
 //            NSLog(@"%@", [NSThread currentThread]);
 //        });
 //    });
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTask) name:AddTaskNotification object:nil];
 }
 
 - (void)reloadTableView:(NSNotification *)notification
@@ -107,11 +109,14 @@
 - (void)addTask
 {
     self.inputTaskView.hidden = NO;
+    
+    
 }
 
 - (void)startClock
 {
     self.clockView.hidden = NO;
+    
 }
 
 #pragma mark - 懒加载

@@ -40,10 +40,12 @@
 #define FinishedTasksTitleValue     @"已完成"
 #define PPSHomeTasksAryKey    @"PPSHomeTasksAryKey"
 
-
 #define PPSHomeTableViewNeedReload @"PPSHomeTableViewNeedReload"
 #define StateCode @"stateCode"
 #define ErrorLocalDiscription @"ErrorLocalDiscription"
+
+// notification
+#define AddTaskNotification @"AddTaskNotification"
 
 
 #endif /* PPSDefine_h */

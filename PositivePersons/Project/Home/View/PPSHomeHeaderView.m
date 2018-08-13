@@ -73,7 +73,7 @@
 
 - (void)addTaskBtnClicked:(UIButton *)taskBtn
 {
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:AddTaskNotification object:nil];
 }
 
 
