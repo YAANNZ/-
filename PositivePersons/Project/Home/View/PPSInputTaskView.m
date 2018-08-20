@@ -80,6 +80,8 @@
     {
         [self.delegate inputTaskView:self finishIuputWithContent:self.taskTextField.text];
     }
+    
+    
 }
 
 

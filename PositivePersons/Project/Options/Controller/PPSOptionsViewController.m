@@ -76,9 +76,9 @@
 //        [strongSelf footerRefreshAction];
 //    };
     
-    self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]]];
-    self.documentInteractionController.delegate = self;
-    [self.documentInteractionController presentOpenInMenuFromRect:self.view.bounds inView:self.view animated:YES];
+//    self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]]];
+//    self.documentInteractionController.delegate = self;
+//    [self.documentInteractionController presentOpenInMenuFromRect:self.view.bounds inView:self.view animated:YES];
 
 //    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:@[@"123"] applicationActivities:nil];
 //    [self presentViewController:controller animated:YES completion:nil];

@@ -46,6 +46,7 @@
 
 // notification
 #define AddTaskNotification @"AddTaskNotification"
+#define updateTaskNotification @"updateTaskNotification"
 
 
 #endif /* PPSDefine_h */

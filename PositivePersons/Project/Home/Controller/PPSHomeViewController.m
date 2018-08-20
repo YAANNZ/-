@@ -43,6 +43,7 @@
     
     // ViewModel - 处理数据和业务
     self.homeTableViewModel = [[PPSHomeTableViewModel alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self.homeTableViewModel selector:@selector(updateTasks) name:updateTaskNotification object:nil];
     
     // 自定义 tableView 的代理，进一步拆分业务
     self.tableViewDelegate = [[PPSHomeTableViewDelegate alloc] init];
