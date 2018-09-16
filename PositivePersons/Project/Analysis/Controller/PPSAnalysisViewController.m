@@ -10,6 +10,7 @@
 #import "PPSBlogViewController.h"
 #import "PPSAnalysisViewModel.h"
 #import "PPSTrendView.h"
+#import "WXApi.h"
 
 @interface PPSAnalysisViewController ()
 
@@ -34,69 +35,108 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"share_unsel"] style:UIBarButtonItemStyleDone target:self action:@selector(sharePage)];
     
     /* view */
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
-    self.scrollView = scrollView;
-    scrollView.backgroundColor = [UIColor brownColor];
-    [self.view addSubview:scrollView];
+//    UIScrollView *scrollView = [[UIScrollView alloc] init];
+//    self.scrollView = scrollView;
+//    scrollView.backgroundColor = [UIColor brownColor];
+//    [self.view addSubview:scrollView];
+//
+//    UILabel *trendLabel = [[UILabel alloc] init];
+//    trendLabel.backgroundColor = [UIColor lightGrayColor];
+//    trendLabel.text = @"Trend";
+//    trendLabel.textAlignment = NSTextAlignmentLeft;
+//    [scrollView addSubview:trendLabel];
+//
+//    PPSTrendView *trendView = [[PPSTrendView alloc] init];
+//    [scrollView addSubview:trendView];
+//
+//    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(@64);
+//        make.left.right.equalTo(@0);
+//        make.bottom.equalTo(@-49);
+//    }];
+//
+//    [trendLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.left.equalTo(@0);
+//        make.height.equalTo(@30);
+//        make.width.equalTo(scrollView.mas_width);
+//    }];
+//
+//    [trendView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(trendLabel.mas_bottom).offset(0);
+//        make.left.equalTo(@0);
+//        make.width.equalTo(scrollView.mas_width);
+//        make.height.mas_equalTo(200.0/300.0*(MAINSCREEN_WIDTH - 40));
+//    }];
+//
+//    /* viewModel */
+//    self.analysisViewModel = [[PPSAnalysisViewModel alloc] init];
+//    trendView.delegate = self.analysisViewModel;
+//
+//    [self.analysisViewModel requesTrendViewDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
+//        trendView.dataArray = array;
+//    }];
     
-    UILabel *trendLabel = [[UILabel alloc] init];
-    trendLabel.backgroundColor = [UIColor lightGrayColor];
-    trendLabel.text = @"Trend";
-    trendLabel.textAlignment = NSTextAlignmentLeft;
-    [scrollView addSubview:trendLabel];
-    
-    PPSTrendView *trendView = [[PPSTrendView alloc] init];
-    [scrollView addSubview:trendView];
-    
-    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(@64);
-        make.left.right.equalTo(@0);
-        make.bottom.equalTo(@-49);
+    // 分享文字
+    UILabel *textLabel = [[UILabel alloc] init];
+    textLabel.numberOfLines = 0;
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 6;
+    paragraphStyle.firstLineHeadIndent = 2*16;
+    NSDictionary *attributeDic = @{
+                                   NSFontAttributeName : [UIFont systemFontOfSize:16],
+                                   NSParagraphStyleAttributeName : paragraphStyle,
+                                   NSForegroundColorAttributeName : [UIColor blackColor]
+                                   };
+    textLabel.attributedText = [[NSAttributedString alloc] initWithString:@"换乘 13 号线的乘客请在芍药居站下车，换乘站客流量大，请您提前换到车门处，文明有序换乘。" attributes:attributeDic];
+    [self.view addSubview:textLabel];
+    [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@20);
+        make.right.equalTo(@-20);
+        make.centerX.equalTo(@0);
+        make.top.mas_equalTo(self.view.height/2 - 45);
     }];
     
-    [trendLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.equalTo(@0);
-        make.height.equalTo(@30);
-        make.width.equalTo(scrollView.mas_width);
+    
+    UILabel *titleTextLabel = [[UILabel alloc] init];
+    titleTextLabel.numberOfLines = 0;
+    NSMutableParagraphStyle *titleParagraphStyle = [[NSMutableParagraphStyle alloc] init];
+    titleParagraphStyle.lineSpacing = 6;
+    titleParagraphStyle.firstLineHeadIndent = self.view.width - 10*16;
+    NSDictionary *titleAttributeDic = @{
+                                        NSFontAttributeName : [UIFont systemFontOfSize:16],
+                                        NSParagraphStyleAttributeName : titleParagraphStyle,
+                                        NSForegroundColorAttributeName : [UIColor blackColor]
+                                        };
+    titleTextLabel.attributedText = [[NSAttributedString alloc] initWithString:@"---《樱花东街》" attributes:titleAttributeDic];
+    [self.view addSubview:titleTextLabel];
+    [titleTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@20);
+        make.right.equalTo(@-20);
+        make.centerX.equalTo(@0);
+        make.top.equalTo(textLabel.mas_bottom).equalTo(@20);
     }];
-    
-    [trendView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(trendLabel.mas_bottom).offset(0);
-        make.left.equalTo(@0);
-        make.width.equalTo(scrollView.mas_width);
-        make.height.mas_equalTo(200.0/300.0*(MAINSCREEN_WIDTH - 40));
-    }];
-    
-    /* viewModel */
-    self.analysisViewModel = [[PPSAnalysisViewModel alloc] init];
-    trendView.delegate = self.analysisViewModel;
-    
-    [self.analysisViewModel requesTrendViewDataWithCallback:^(NSArray *array, BOOL isSuccess, NSString *errorStr) {
-        trendView.dataArray = array;
-    }];
-    
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, MAINSCREEN_WIDTH, MAINSCREEN_HEIGHT - 64 - 49)];
-    [self.view addSubview:webView];
-    webView.scalesPageToFit = YES;
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"free_resume" ofType:@"html" inDirectory:@"awesomeResume/free"]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:request];
 }
 
 // 分享 // https://www.jianshu.com/p/9215f8860af5
 - (void)sharePage
 {
-//    UIImageView *imgView = [[UIImageView alloc] initWithImage:[self snapshotWithCapInsets:UIEdgeInsetsMake(0, 0, 0, -113)]];
-//    imgView.backgroundColor = [UIColor brownColor];
-//    imgView.frame = CGRectMake(0, 0, MAINSCREEN_WIDTH, MAINSCREEN_HEIGHT);
-//    [[[UIApplication sharedApplication] keyWindow] addSubview:imgView];
+    WXMediaMessage *message = [WXMediaMessage message];
+    WXImageObject *imageObject = [WXImageObject object];
+    imageObject.imageData = UIImageJPEGRepresentation([self snapshotWithCapInsets:UIEdgeInsetsZero], 1.0);
+    message.mediaObject = imageObject;
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneTimeline;
+    [WXApi sendReq:req];
 }
 
 - (UIImage *)snapshotWithCapInsets:(UIEdgeInsets)capInsets
 {
     UIGraphicsBeginImageContextWithOptions(self.view.frame.size, NO, [UIScreen mainScreen].scale);
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    [self.scrollView.layer renderInContext:currentContext];
+    [self.view.layer renderInContext:currentContext];
     UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
                                            
@@ -105,7 +145,23 @@
     return snapshotView.image;
 }
 
-
+- (void)upload
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = @"米店";
+    message.description = @"三月的烟雨，飘摇的南方，你坐在你空空的米店...";
+    [message setThumbImage:[UIImage imageNamed:@"midian"]];
+    
+    WXMusicObject *musicObject = [WXMusicObject object];
+    musicObject.musicUrl = @"";
+    message.mediaObject = musicObject;
+    
+    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneTimeline;
+    [WXApi sendReq:req];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

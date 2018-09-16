@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "PPSTabBarController.h"
 #import <Bugly/Bugly.h>
+#import "WXApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <WXApiDelegate>
 
 @end
 
@@ -27,6 +28,8 @@
     // 初始化Bugly
     BuglyConfig *config = [[BuglyConfig alloc] init];
     [Bugly startWithAppId:@"2363d3b46b" developmentDevice:YES config:config];
+    
+    [WXApi registerApp:@"wx4b4c6d8faff34ab2"];
     
     return YES;
 }
@@ -58,5 +61,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
 
 @end

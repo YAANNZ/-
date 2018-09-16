@@ -209,7 +209,6 @@
 		193F25D720BB0FD300F08873 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
 		193F25D820BB0FD300F08873 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		193F25D920BB0FD300F08873 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
-		197DAE9020E38407002D7B8C /* PositivePersons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositivePersons.entitlements; sourceTree = "<group>"; };
 		197DAE9520E47AEC002D7B8C /* awesomeResume */ = {isa = PBXFileReference; lastKnownFileType = folder; path = awesomeResume; sourceTree = "<group>"; };
 		19911C2720ECC419007C24F4 /* UITextView+PPSAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+PPSAddition.h"; sourceTree = "<group>"; };
 		19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+PPSAddition.m"; sourceTree = "<group>"; };
@@ -632,7 +631,6 @@
 		19E1517320A4374D001D6E60 /* PositivePersons */ = {
 			isa = PBXGroup;
 			children = (
-				197DAE9020E38407002D7B8C /* PositivePersons.entitlements */,
 				193F24FF20AEC68200F08873 /* Project */,
 				19E1517A20A4374D001D6E60 /* Main.storyboard */,
 				19E1517D20A4374D001D6E60 /* Assets.xcassets */,
@@ -753,8 +751,11 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Siri = {
 								enabled = 0;
@@ -1102,18 +1103,18 @@
 			baseConfigurationReference = F54D0C87A234CAED2A7A2962 /* Pods-PositivePersons.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PositivePersons/PositivePersons.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: yang yang (QP2QGEH66W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yang yang (QP2QGEH66W)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3RNRBZPDHP;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PositivePersons/Project/Base/PrefixHeader.pch";
 				INFOPLIST_FILE = PositivePersons/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.positiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "77e4f8ba-d896-480f-8d11-f7ba460dec80";
-				PROVISIONING_PROFILE_SPECIFIER = PositivePersons_dev;
+				PROVISIONING_PROFILE = "1cdbf926-0690-49f3-b0f0-42c8c88f387a";
+				PROVISIONING_PROFILE_SPECIFIER = now_dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1123,18 +1124,18 @@
 			baseConfigurationReference = 00666E991F76909CB0DFC444 /* Pods-PositivePersons.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PositivePersons/PositivePersons.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3RNRBZPDHP;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PositivePersons/Project/Base/PrefixHeader.pch";
 				INFOPLIST_FILE = PositivePersons/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.psitiveperson;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zyn.positiveperson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "11f26902-463b-4323-9987-4952e5c14ec3";
-				PROVISIONING_PROFILE_SPECIFIER = PositivePersons_dis;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1160,6 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3RNRBZPDHP;
@@ -1192,6 +1194,7 @@
 		19E151A520A4374E001D6E60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3RNRBZPDHP;
