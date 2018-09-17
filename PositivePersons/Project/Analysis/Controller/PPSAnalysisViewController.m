@@ -11,6 +11,7 @@
 #import "PPSAnalysisViewModel.h"
 #import "PPSTrendView.h"
 #import "WXApi.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface PPSAnalysisViewController ()
 
@@ -96,7 +97,7 @@
         make.top.mas_equalTo(self.view.height/2 - 45);
     }];
     
-    
+    // 分享音频
     UILabel *titleTextLabel = [[UILabel alloc] init];
     titleTextLabel.numberOfLines = 0;
     NSMutableParagraphStyle *titleParagraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -115,6 +116,22 @@
         make.centerX.equalTo(@0);
         make.top.equalTo(textLabel.mas_bottom).equalTo(@20);
     }];
+    
+    // 加载音频
+    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"001" ofType:@"mp3"];
+    NSError *error;
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:mp3Path] error:&error];
+    audioPlayer.numberOfLoops = 0;
+    audioPlayer.volume = 0.8;
+    [audioPlayer prepareToPlay];
+    BOOL success = [audioPlayer play];
+    NSLog(@"%d", success);
+    
+    // 后台播放；同时打开 Capabilities
+    AVAudioSession *audioSession=[AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [audioSession setActive:YES error:nil];
+
 }
 
 // 分享 // https://www.jianshu.com/p/9215f8860af5
