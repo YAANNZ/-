@@ -37,7 +37,7 @@
     [self setupOneChildViewController:analysisVc Title:@"Analysis" normalImg:[UIImage imageNamed:@"Analysis_unselect"] selImg:[UIImage imageNamed:@"Analysis_select"]];
     
     PPSFreelyViewController *freelyVc = [[PPSFreelyViewController alloc] init];
-    [self setupOneChildViewController:freelyVc Title:@"freely" normalImg:[UIImage imageNamed:@"Analysis_unselect"] selImg:[UIImage imageNamed:@"Analysis_select"]];
+    [self setupOneChildViewController:freelyVc Title:@"freely" normalImg:[UIImage imageNamed:@"freely_unselect"] selImg:[UIImage imageNamed:@"freely_select"]];
 }
 
 - (void)setupOneChildViewController:(UIViewController *)childVc Title:(NSString *)title normalImg:(UIImage *)normalImg selImg:(UIImage *)selImg

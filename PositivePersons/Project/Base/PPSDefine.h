@@ -48,5 +48,26 @@
 #define AddTaskNotification @"AddTaskNotification"
 #define updateTaskNotification @"updateTaskNotification"
 
+/*
+ Freely
+ */
+#define PPSFreelyTableViewCellID @"PPSFreelyTableViewCellID"
+#define PPSFreelyWordTableViewCellID @"PPSFreelyWordTableViewCellID"
+#define PPSFreelyAudioTableViewCellID @"PPSFreelyAudioTableViewCellID"
+#define PPSFreelyTableViewHeaderViewID @"PPSFreelyTableViewHeaderViewID"
 
 #endif /* PPSDefine_h */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

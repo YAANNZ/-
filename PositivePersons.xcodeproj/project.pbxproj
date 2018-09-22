@@ -17,7 +17,14 @@
 		19186DC320DA87E30031CB8F /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 19186DC220DA87E30031CB8F /* add@3x.png */; };
 		19186DC620DA89930031CB8F /* PPSInputTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19186DC520DA89930031CB8F /* PPSInputTaskView.m */; };
 		19205D44214FF316001035CC /* 001.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19205D43214FF316001035CC /* 001.mp3 */; };
-		19205D482151406A001035CC /* PPSFreelyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D472151406A001035CC /* PPSFreelyViewController.m */; };
+		19205D4C2155E307001035CC /* PPSFreelyTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D4B2155E307001035CC /* PPSFreelyTableViewDelegate.m */; };
+		19205D4F2155E32B001035CC /* PPSFreelyTableViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D4E2155E32B001035CC /* PPSFreelyTableViewDatasource.m */; };
+		19205D552155F055001035CC /* PPSFreelyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D522155F055001035CC /* PPSFreelyViewController.m */; };
+		19205D5A2155F0BE001035CC /* PPSFreelyWordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D582155F0BE001035CC /* PPSFreelyWordTableViewCell.m */; };
+		19205D5B2155F0BE001035CC /* PPSFreelyWordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19205D592155F0BE001035CC /* PPSFreelyWordTableViewCell.xib */; };
+		19205D5F2155F0CF001035CC /* PPSFreelyAudioTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D5D2155F0CF001035CC /* PPSFreelyAudioTableViewCell.m */; };
+		19205D602155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19205D5E2155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib */; };
+		19205D632156295C001035CC /* PPSFreelyTableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19205D622156295C001035CC /* PPSFreelyTableViewHeaderView.m */; };
 		193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250220AEC68200F08873 /* PPSHomeViewController.m */; };
 		193F251820AEC68300F08873 /* PPSOptionsTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */; };
 		193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193F250920AEC68200F08873 /* PPSOptionsViewController.m */; };
@@ -117,8 +124,20 @@
 		19186DC420DA89930031CB8F /* PPSInputTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSInputTaskView.h; sourceTree = "<group>"; };
 		19186DC520DA89930031CB8F /* PPSInputTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSInputTaskView.m; sourceTree = "<group>"; };
 		19205D43214FF316001035CC /* 001.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 001.mp3; sourceTree = "<group>"; };
-		19205D462151406A001035CC /* PPSFreelyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyViewController.h; sourceTree = "<group>"; };
-		19205D472151406A001035CC /* PPSFreelyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyViewController.m; sourceTree = "<group>"; };
+		19205D4A2155E307001035CC /* PPSFreelyTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyTableViewDelegate.h; sourceTree = "<group>"; };
+		19205D4B2155E307001035CC /* PPSFreelyTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyTableViewDelegate.m; sourceTree = "<group>"; };
+		19205D4D2155E32B001035CC /* PPSFreelyTableViewDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyTableViewDatasource.h; sourceTree = "<group>"; };
+		19205D4E2155E32B001035CC /* PPSFreelyTableViewDatasource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyTableViewDatasource.m; sourceTree = "<group>"; };
+		19205D512155F055001035CC /* PPSFreelyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSFreelyViewController.h; sourceTree = "<group>"; };
+		19205D522155F055001035CC /* PPSFreelyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyViewController.m; sourceTree = "<group>"; };
+		19205D572155F0BE001035CC /* PPSFreelyWordTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyWordTableViewCell.h; sourceTree = "<group>"; };
+		19205D582155F0BE001035CC /* PPSFreelyWordTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyWordTableViewCell.m; sourceTree = "<group>"; };
+		19205D592155F0BE001035CC /* PPSFreelyWordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPSFreelyWordTableViewCell.xib; sourceTree = "<group>"; };
+		19205D5C2155F0CF001035CC /* PPSFreelyAudioTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyAudioTableViewCell.h; sourceTree = "<group>"; };
+		19205D5D2155F0CF001035CC /* PPSFreelyAudioTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyAudioTableViewCell.m; sourceTree = "<group>"; };
+		19205D5E2155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPSFreelyAudioTableViewCell.xib; sourceTree = "<group>"; };
+		19205D612156295C001035CC /* PPSFreelyTableViewHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyTableViewHeaderView.h; sourceTree = "<group>"; };
+		19205D622156295C001035CC /* PPSFreelyTableViewHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyTableViewHeaderView.m; sourceTree = "<group>"; };
 		193F250220AEC68200F08873 /* PPSHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSHomeViewController.m; sourceTree = "<group>"; };
 		193F250320AEC68200F08873 /* PPSHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSHomeViewController.h; sourceTree = "<group>"; };
 		193F250620AEC68200F08873 /* PPSOptionsTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSOptionsTableViewModel.m; sourceTree = "<group>"; };
@@ -327,10 +346,55 @@
 		19205D4521513FEA001035CC /* Freely */ = {
 			isa = PBXGroup;
 			children = (
-				19205D462151406A001035CC /* PPSFreelyViewController.h */,
-				19205D472151406A001035CC /* PPSFreelyViewController.m */,
+				19205D502155F055001035CC /* Controller */,
+				19205D542155F055001035CC /* View */,
+				19205D562155F075001035CC /* ViewModel */,
+				19205D492155E299001035CC /* TableViewProtocol */,
 			);
 			path = Freely;
+			sourceTree = "<group>";
+		};
+		19205D492155E299001035CC /* TableViewProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				19205D4A2155E307001035CC /* PPSFreelyTableViewDelegate.h */,
+				19205D4B2155E307001035CC /* PPSFreelyTableViewDelegate.m */,
+				19205D4D2155E32B001035CC /* PPSFreelyTableViewDatasource.h */,
+				19205D4E2155E32B001035CC /* PPSFreelyTableViewDatasource.m */,
+			);
+			name = TableViewProtocol;
+			path = PositivePersons/Project/Freely/TableViewProtocol;
+			sourceTree = SOURCE_ROOT;
+		};
+		19205D502155F055001035CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19205D512155F055001035CC /* PPSFreelyViewController.h */,
+				19205D522155F055001035CC /* PPSFreelyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		19205D542155F055001035CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19205D572155F0BE001035CC /* PPSFreelyWordTableViewCell.h */,
+				19205D582155F0BE001035CC /* PPSFreelyWordTableViewCell.m */,
+				19205D592155F0BE001035CC /* PPSFreelyWordTableViewCell.xib */,
+				19205D5C2155F0CF001035CC /* PPSFreelyAudioTableViewCell.h */,
+				19205D5D2155F0CF001035CC /* PPSFreelyAudioTableViewCell.m */,
+				19205D5E2155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib */,
+				19205D612156295C001035CC /* PPSFreelyTableViewHeaderView.h */,
+				19205D622156295C001035CC /* PPSFreelyTableViewHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19205D562155F075001035CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		193F24FF20AEC68200F08873 /* Project */ = {
@@ -823,7 +887,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19205D5B2155F0BE001035CC /* PPSFreelyWordTableViewCell.xib in Resources */,
 				19205D44214FF316001035CC /* 001.mp3 in Resources */,
+				19205D602155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib in Resources */,
 				19186DC320DA87E30031CB8F /* add@3x.png in Resources */,
 				193F259A20B9B2F200F08873 /* Info.plist in Resources */,
 				19BDD09820D539FC00C9117D /* patient.jpg in Resources */,
@@ -925,8 +991,11 @@
 				19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */,
 				193F25E220BB0FD300F08873 /* MJPropertyKey.m in Sources */,
 				19E1518420A4374D001D6E60 /* main.m in Sources */,
+				19205D4C2155E307001035CC /* PPSFreelyTableViewDelegate.m in Sources */,
 				193F259920B9B2F200F08873 /* MASViewAttribute.m in Sources */,
+				19205D632156295C001035CC /* PPSFreelyTableViewHeaderView.m in Sources */,
 				19911C2920ECC419007C24F4 /* UITextView+PPSAddition.m in Sources */,
+				19205D5F2155F0CF001035CC /* PPSFreelyAudioTableViewCell.m in Sources */,
 				193F252B20B1D11C00F08873 /* PPSOptionsTableViewDataSource.m in Sources */,
 				193F259720B9B2F200F08873 /* MASConstraint.m in Sources */,
 				193F254720B2AF8300F08873 /* PPSRefreshHeader.m in Sources */,
@@ -945,8 +1014,9 @@
 				193F25B720BADFF700F08873 /* PPSHomeTableViewDelegate.m in Sources */,
 				193F25DC20BB0FD300F08873 /* MJProperty.m in Sources */,
 				19911C3D20EE1930007C24F4 /* UIView+Extension.m in Sources */,
+				19205D4F2155E32B001035CC /* PPSFreelyTableViewDatasource.m in Sources */,
+				19205D5A2155F0BE001035CC /* PPSFreelyWordTableViewCell.m in Sources */,
 				193F259020B9B2F200F08873 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				19205D482151406A001035CC /* PPSFreelyViewController.m in Sources */,
 				193F251720AEC68300F08873 /* PPSHomeViewController.m in Sources */,
 				193F25AF20B9B69800F08873 /* AFSecurityPolicy.m in Sources */,
 				193F259120B9B2F200F08873 /* ViewController+MASAdditions.m in Sources */,
@@ -955,6 +1025,7 @@
 				193F259220B9B2F200F08873 /* MASCompositeConstraint.m in Sources */,
 				193F251920AEC68300F08873 /* PPSOptionsViewController.m in Sources */,
 				193F25C020BAE1F600F08873 /* PPSHomeModel.m in Sources */,
+				19205D552155F055001035CC /* PPSFreelyViewController.m in Sources */,
 				19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */,
 				193F259420B9B2F200F08873 /* MASLayoutConstraint.m in Sources */,
 				193F25DD20BB0FD300F08873 /* NSObject+MJCoding.m in Sources */,

@@ -147,20 +147,7 @@
 
 - (void)upload
 {
-    WXMediaMessage *message = [WXMediaMessage message];
-    message.title = @"米店";
-    message.description = @"三月的烟雨，飘摇的南方，你坐在你空空的米店...";
-    [message setThumbImage:[UIImage imageNamed:@"midian"]];
     
-    WXMusicObject *musicObject = [WXMusicObject object];
-    musicObject.musicUrl = @"";
-    message.mediaObject = musicObject;
-    
-    SendMessageToWXReq *req = [[SendMessageToWXReq alloc] init];
-    req.bText = NO;
-    req.message = message;
-    req.scene = WXSceneTimeline;
-    [WXApi sendReq:req];
 }
 
 - (void)didReceiveMemoryWarning {
