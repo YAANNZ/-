@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^PPSFreelyTableViewDelegateBlock)(NSString *titleStr);
+
 @interface PPSFreelyTableViewDelegate : NSObject <UITableViewDelegate>
 
+@property (nonatomic, copy) PPSFreelyTableViewDelegateBlock selectBlock;
 @property (nonatomic, strong) NSArray *titleArray;
 
 @end

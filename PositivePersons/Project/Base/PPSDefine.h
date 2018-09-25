@@ -47,6 +47,7 @@
 // notification
 #define AddTaskNotification @"AddTaskNotification"
 #define updateTaskNotification @"updateTaskNotification"
+#define FreelyPreviewShare @"FreelyPreviewShare"
 
 /*
  Freely

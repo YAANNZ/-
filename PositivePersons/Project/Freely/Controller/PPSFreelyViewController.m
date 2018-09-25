@@ -11,6 +11,7 @@
 #import "PPSFreelyTableViewDatasource.h"
 #import "PPSFreelyWordTableViewCell.h"
 #import "PPSFreelyAudioTableViewCell.h"
+#import "PPSFreelyReadViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface PPSFreelyViewController ()
@@ -46,12 +47,22 @@
     // 自定义 tableView 的代理，进一步拆分业务
     self.tableViewDelegate = [[PPSFreelyTableViewDelegate alloc] init];
     self.tableViewDelegate.titleArray = self.titleArray;
+    __weak typeof(self) weakself = self;
+    self.tableViewDelegate.selectBlock = ^(NSString *titleStr){
+        PPSFreelyReadViewController *readVC = [[PPSFreelyReadViewController alloc] init];
+        readVC.docName = titleStr;
+        readVC.hidesBottomBarWhenPushed = YES;
+        __strong typeof(weakself) strongself = weakself;
+        [strongself.navigationController pushViewController:readVC animated:YES];
+    };
+    
     self.tableViewDatasource = [[PPSFreelyTableViewDatasource alloc] init];
     self.tableViewDatasource.dataArray = self.dataArray;
+    
     self.tableView.delegate = self.tableViewDelegate;
     self.tableView.dataSource = self.tableViewDatasource;
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(freelyPreviewShare:) name:FreelyPreviewShare object:nil];
     
     // 加载音频
     NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"001" ofType:@"mp3"];
@@ -71,12 +82,15 @@
     [audioSession setActive:YES error:nil];
 }
 
+- (void)freelyPreviewShare:(NSNotification *)notifi
+{}
+
 #pragma mark - 懒加载
 - (NSArray *)dataArray
 {
     if (!_dataArray)
     {
-        _dataArray = @[@[@"2017", @"2016", @"2015"], @[@"001", @"002", @"003"], @[@"文字分享"], @[@"音频分享"]];
+        _dataArray = @[@[@"2017年上", @"2017年下", @"2016年上", @"2016年下"], @[@"001", @"002", @"003"], @[@"文字分享"], @[@"音频分享"]];
     }
     return _dataArray;
 }

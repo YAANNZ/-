@@ -38,10 +38,17 @@
                         <rect key="frame" x="129" y="110" width="62" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="预览分享"/>
+                        <connections>
+                            <action selector="previewShare:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cbU-8M-IDV"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="subtitleTextField" destination="h4e-iE-Rw7" id="VXR-w0-nPa"/>
+                <outlet property="titleTextView" destination="2Tl-nk-e8G" id="0Ru-Yh-UDO"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

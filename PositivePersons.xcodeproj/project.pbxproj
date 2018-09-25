@@ -73,6 +73,12 @@
 		19911C2920ECC419007C24F4 /* UITextView+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C2820ECC419007C24F4 /* UITextView+PPSAddition.m */; };
 		19911C2C20ECCEE9007C24F4 /* PPSClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C2B20ECCEE9007C24F4 /* PPSClockView.m */; };
 		19911C3D20EE1930007C24F4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 19911C3B20EE1930007C24F4 /* UIView+Extension.m */; };
+		199A0658215740120026D37F /* PPSFreelyReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 199A0656215740120026D37F /* PPSFreelyReadViewController.m */; };
+		199A0659215740120026D37F /* PPSFreelyReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 199A0657215740120026D37F /* PPSFreelyReadViewController.xib */; };
+		199A065E215A90510026D37F /* 2016年上.docx in Resources */ = {isa = PBXBuildFile; fileRef = 199A065A215A90500026D37F /* 2016年上.docx */; };
+		199A065F215A90510026D37F /* 2017年下.docx in Resources */ = {isa = PBXBuildFile; fileRef = 199A065B215A90500026D37F /* 2017年下.docx */; };
+		199A0660215A90510026D37F /* 2016年下.docx in Resources */ = {isa = PBXBuildFile; fileRef = 199A065C215A90500026D37F /* 2016年下.docx */; };
+		199A0661215A90510026D37F /* 2017年上.docx in Resources */ = {isa = PBXBuildFile; fileRef = 199A065D215A90510026D37F /* 2017年上.docx */; };
 		19BDD09620D539FC00C9117D /* PPSDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */; };
 		19BDD09720D539FC00C9117D /* NSString+PPSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */; };
 		19BDD09820D539FC00C9117D /* patient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19BDD09420D539FC00C9117D /* patient.jpg */; };
@@ -240,6 +246,13 @@
 		19911C2B20ECCEE9007C24F4 /* PPSClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSClockView.m; sourceTree = "<group>"; };
 		19911C3B20EE1930007C24F4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		19911C3C20EE1930007C24F4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		199A0655215740120026D37F /* PPSFreelyReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSFreelyReadViewController.h; sourceTree = "<group>"; };
+		199A0656215740120026D37F /* PPSFreelyReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSFreelyReadViewController.m; sourceTree = "<group>"; };
+		199A0657215740120026D37F /* PPSFreelyReadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPSFreelyReadViewController.xib; sourceTree = "<group>"; };
+		199A065A215A90500026D37F /* 2016年上.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2016年上.docx"; sourceTree = "<group>"; };
+		199A065B215A90500026D37F /* 2017年下.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2017年下.docx"; sourceTree = "<group>"; };
+		199A065C215A90500026D37F /* 2016年下.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2016年下.docx"; sourceTree = "<group>"; };
+		199A065D215A90510026D37F /* 2017年上.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2017年上.docx"; sourceTree = "<group>"; };
 		19BDD08E20D539FC00C9117D /* PPSDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSDataBaseHelper.m; sourceTree = "<group>"; };
 		19BDD08F20D539FC00C9117D /* PPSDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSDataBaseHelper.h; sourceTree = "<group>"; };
 		19BDD09120D539FC00C9117D /* NSString+PPSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPSAddition.m"; sourceTree = "<group>"; };
@@ -371,6 +384,9 @@
 			children = (
 				19205D512155F055001035CC /* PPSFreelyViewController.h */,
 				19205D522155F055001035CC /* PPSFreelyViewController.m */,
+				199A0655215740120026D37F /* PPSFreelyReadViewController.h */,
+				199A0656215740120026D37F /* PPSFreelyReadViewController.m */,
+				199A0657215740120026D37F /* PPSFreelyReadViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -656,6 +672,17 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		199A064721573E9A0026D37F /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				199A065A215A90500026D37F /* 2016年上.docx */,
+				199A065C215A90500026D37F /* 2016年下.docx */,
+				199A065D215A90510026D37F /* 2017年上.docx */,
+				199A065B215A90500026D37F /* 2017年下.docx */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
 		19BDD08D20D539FC00C9117D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,6 +710,7 @@
 		19BDD09320D539FC00C9117D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				199A064721573E9A0026D37F /* Doc */,
 				197DAE9520E47AEC002D7B8C /* awesomeResume */,
 				19205D3C214FEE11001035CC /* dmyy */,
 				19186DC220DA87E30031CB8F /* add@3x.png */,
@@ -887,17 +915,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199A065F215A90510026D37F /* 2017年下.docx in Resources */,
 				19205D5B2155F0BE001035CC /* PPSFreelyWordTableViewCell.xib in Resources */,
 				19205D44214FF316001035CC /* 001.mp3 in Resources */,
 				19205D602155F0CF001035CC /* PPSFreelyAudioTableViewCell.xib in Resources */,
+				199A0660215A90510026D37F /* 2016年下.docx in Resources */,
 				19186DC320DA87E30031CB8F /* add@3x.png in Resources */,
 				193F259A20B9B2F200F08873 /* Info.plist in Resources */,
 				19BDD09820D539FC00C9117D /* patient.jpg in Resources */,
 				197DAE9620E47AED002D7B8C /* awesomeResume in Resources */,
 				19186DA120D89E550031CB8F /* share_unsel@3x.png in Resources */,
 				19BDD09920D539FC00C9117D /* positive.png in Resources */,
+				199A0661215A90510026D37F /* 2017年上.docx in Resources */,
 				19186DA220D89E550031CB8F /* share_sel@3x.png in Resources */,
 				19E1518120A4374D001D6E60 /* LaunchScreen.storyboard in Resources */,
+				199A065E215A90510026D37F /* 2016年上.docx in Resources */,
+				199A0659215740120026D37F /* PPSFreelyReadViewController.xib in Resources */,
 				19E1517E20A4374D001D6E60 /* Assets.xcassets in Resources */,
 				19E1517C20A4374D001D6E60 /* Main.storyboard in Resources */,
 			);
@@ -976,6 +1009,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19911C2C20ECCEE9007C24F4 /* PPSClockView.m in Sources */,
+				199A0658215740120026D37F /* PPSFreelyReadViewController.m in Sources */,
 				193F25AD20B9B69800F08873 /* AFURLRequestSerialization.m in Sources */,
 				193F25DE20BB0FD300F08873 /* MJExtensionConst.m in Sources */,
 				193F254620B2AF8300F08873 /* PPSRefreshFooter.m in Sources */,

@@ -33,4 +33,18 @@
     return headerView;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0)
+    {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        if (self.selectBlock) {
+            self.selectBlock(cell.textLabel.text);
+        }
+    }
+    
+}
+
 @end
