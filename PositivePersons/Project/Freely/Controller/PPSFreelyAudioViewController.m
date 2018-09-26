@@ -22,17 +22,10 @@
 {
     [super viewDidLoad];
     
-    
-}
-
-- (void)setAudioName:(NSString *)audioName
-{
-    _audioName = audioName;
-    
     // 加载音频
-    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:self.audioName ofType:@"mp3"];
+    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"古代奇案001" ofType:@"mp3"];
     NSError *error;
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:mp3Path] error:&error];
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:[mp3Path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] error:&error];
     self.audioPlayer = audioPlayer;
     audioPlayer.numberOfLoops = 0;
     audioPlayer.volume = 0.8;
@@ -45,6 +38,13 @@
     self.audioSession = audioSession;
     [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
     [audioSession setActive:YES error:nil];
+}
+
+- (void)setAudioName:(NSString *)audioName
+{
+    _audioName = audioName;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
