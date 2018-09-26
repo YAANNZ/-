@@ -43,8 +43,13 @@
         if (self.selectBlock) {
             self.selectBlock(cell.textLabel.text);
         }
+    } else if (indexPath.section == 1)
+    {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        if (self.audioSelectBlock) {
+            self.audioSelectBlock(cell.textLabel.text);
+        }
     }
-    
 }
 
 @end

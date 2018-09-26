@@ -13,6 +13,7 @@ typedef void(^PPSFreelyTableViewDelegateBlock)(NSString *titleStr);
 @interface PPSFreelyTableViewDelegate : NSObject <UITableViewDelegate>
 
 @property (nonatomic, copy) PPSFreelyTableViewDelegateBlock selectBlock;
+@property (nonatomic, copy) PPSFreelyTableViewDelegateBlock audioSelectBlock;
 @property (nonatomic, strong) NSArray *titleArray;
 
 @end

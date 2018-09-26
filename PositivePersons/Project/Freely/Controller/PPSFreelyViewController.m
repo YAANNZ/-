@@ -12,17 +12,17 @@
 #import "PPSFreelyWordTableViewCell.h"
 #import "PPSFreelyAudioTableViewCell.h"
 #import "PPSFreelyReadViewController.h"
-#import <AVFoundation/AVFoundation.h>
+#import "PPSFreelyViewModel.h"
+#import "PPSFreelyAudioViewController.h"
+
 
 @interface PPSFreelyViewController ()
 
 @property (nonatomic, weak) UITableView *tableView;
-@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
-@property (nonatomic, strong) AVAudioSession *audioSession;
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) NSArray *dataArray;
 
-
+@property (nonatomic, strong) PPSFreelyViewModel *freelyViewModel;
 @property (nonatomic, strong) PPSFreelyTableViewDelegate *tableViewDelegate;
 @property (nonatomic, strong) PPSFreelyTableViewDatasource *tableViewDatasource;
 
@@ -51,9 +51,18 @@
     self.tableViewDelegate.selectBlock = ^(NSString *titleStr){
         PPSFreelyReadViewController *readVC = [[PPSFreelyReadViewController alloc] init];
         readVC.docName = titleStr;
+        readVC.title = titleStr;
         readVC.hidesBottomBarWhenPushed = YES;
         __strong typeof(weakself) strongself = weakself;
         [strongself.navigationController pushViewController:readVC animated:YES];
+    };
+    self.tableViewDelegate.audioSelectBlock = ^(NSString *titleStr){
+        PPSFreelyAudioViewController *audioVC = [[PPSFreelyAudioViewController alloc] init];
+        audioVC.audioName = titleStr;
+        audioVC.title = titleStr;
+        audioVC.hidesBottomBarWhenPushed = YES;
+        __strong typeof(weakself) strongself = weakself;
+        [strongself.navigationController pushViewController:audioVC animated:YES];
     };
     
     self.tableViewDatasource = [[PPSFreelyTableViewDatasource alloc] init];
@@ -63,34 +72,19 @@
     self.tableView.dataSource = self.tableViewDatasource;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(freelyPreviewShare:) name:FreelyPreviewShare object:nil];
-    
-    // 加载音频
-    NSString *mp3Path = [[NSBundle mainBundle] pathForResource:@"001" ofType:@"mp3"];
-    NSError *error;
-    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:mp3Path] error:&error];
-//    self.audioPlayer = audioPlayer;
-//    audioPlayer.numberOfLoops = 0;
-    //    audioPlayer.volume = 0.8;
-//    [audioPlayer prepareToPlay];
-//    BOOL success = [audioPlayer play];
-//    NSLog(@"%d", success);
-    
-    // 后台播放；同时打开 Capabilities
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    self.audioSession = audioSession;
-    [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
-    [audioSession setActive:YES error:nil];
 }
 
 - (void)freelyPreviewShare:(NSNotification *)notifi
-{}
+{
+    
+}
 
 #pragma mark - 懒加载
 - (NSArray *)dataArray
 {
     if (!_dataArray)
     {
-        _dataArray = @[@[@"2017年上", @"2017年下", @"2016年上", @"2016年下"], @[@"001", @"002", @"003"], @[@"文字分享"], @[@"音频分享"]];
+        _dataArray = @[@[@"2017年上", @"2017年下", @"2016年上", @"2016年下"], @[@"古代奇案001", @"古代奇案002", @"古代奇案003"], @[@"文字分享"], @[@"音频分享"]];
     }
     return _dataArray;
 }
