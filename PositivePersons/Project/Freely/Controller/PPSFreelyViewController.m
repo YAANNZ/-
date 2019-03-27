@@ -84,7 +84,14 @@
 {
     if (!_dataArray)
     {
-        _dataArray = @[@[@"2017年上", @"2017年下", @"2016年上", @"2016年下"], @[@"古代奇案001", @"古代奇案002", @"古代奇案003"], @[@"文字分享"], @[@"音频分享"]];
+        NSMutableArray *tempAry = [[NSMutableArray alloc] init];
+        
+        for (int i = 2009; i < 2018; i++) {
+            [tempAry addObject:[[[NSString alloc] initWithFormat:@"%d", i] stringByAppendingString:@"年下"]];
+            [tempAry addObject:[[[NSString alloc] initWithFormat:@"%d", i] stringByAppendingString:@"年上"]];
+        }
+        
+        _dataArray = [[NSArray alloc] initWithObjects:[[tempAry reverseObjectEnumerator] allObjects], @[@"古代奇案001", @"古代奇案002", @"古代奇案003"], @[@"文字分享"], @[@"音频分享"], nil];
     }
     return _dataArray;
 }
